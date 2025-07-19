@@ -1,0 +1,62 @@
+{
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "plugins": ["html", "prettier"],
+  "globals": {
+    "BaseComponent": "readonly"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@ui", "./src/components/ui"],
+          ["@layout", "./src/components/layout/index.js"],
+          ["@assets", "./src/assets/assets.js"],
+          ["@components", "./src/components/index.js"],
+          ["@base-components", "./src/components/base-component.js"]
+        ],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "import/no-absolute-path": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["vite.config.js"]
+      }
+    ],
+    "no-console": "warn",
+    "no-undef": "error",
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "object-curly-spacing": ["error", "always"],
+    "arrow-body-style": ["error", "as-needed"],
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "camelcase": ["error", { "properties": "always" }],
+    "id-match": [
+      "error",
+      "^[a-z][a-zA-Z0-9]*$|^[A-Z][a-zA-Z0-9]*$",
+      {
+        "onlyDeclarations": true
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["vite.config.js"],
+      "parserOptions": {
+        "ecmaVersion": 2022,
+        "sourceType": "module"
+      }
+    }
+  ]
+}

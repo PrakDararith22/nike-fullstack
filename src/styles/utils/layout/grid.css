@@ -1,0 +1,85 @@
+/* layout grid */
+.layout-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+/* Mobile semantic patterns (now 2-column layout on mobile) */
+.col-full-sm {
+  grid-column: span 12;
+}
+
+.col-half-sm {
+  grid-column: span 6;
+}
+
+.col-third-sm {
+  grid-column: span 4;
+}
+
+.col-two-thirds-sm {
+  grid-column: span 8;
+}
+
+.col-quarter-sm {
+  grid-column: span 3;
+}
+
+.col-three-quarters-sm {
+  grid-column: span 9;
+}
+
+/* Tablet (≥768px) */
+@media (width >= 768px) {
+  .col-full-md {
+    grid-column: span 12;
+  }
+
+  .col-half-md {
+    grid-column: span 6;
+  }
+
+  .col-third-md {
+    grid-column: span 4;
+  }
+
+  .col-two-thirds-md {
+    grid-column: span 8;
+  }
+
+  .col-quarter-md {
+    grid-column: span 3;
+  }
+
+  .col-three-quarters-md {
+    grid-column: span 9;
+  }
+}
+
+/* Desktop (≥1024px) */
+@media (width >= 1024px) {
+  .col-full-lg {
+    grid-column: span 12;
+  }
+
+  .col-half-lg {
+    grid-column: span 6;
+  }
+
+  .col-third-lg {
+    grid-column: span 4;
+  }
+
+  .col-two-thirds-lg {
+    grid-column: span 8;
+  }
+
+  .col-quarter-lg {
+    grid-column: span 3;
+  }
+
+  .col-three-quarters-lg {
+    grid-column: span 9;
+  }
+}

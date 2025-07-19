@@ -1,0 +1,26 @@
+/* Hover box shadow utilities */
+.hover-shadow-black-2px:hover {
+  box-shadow: 0 0 0 2px rgb(0 0 0);
+}
+
+.hover-shadow-black-1px:hover {
+  box-shadow: 0 0 0 1px rgb(0 0 0);
+}
+
+.hover-bg-accent:hover {
+  background-color: var(--color-gray-300);
+}
+
+.hover-bg-primary:hover {
+  background-color: var(--color-muted);
+}
+
+/* Hover text color utilities */
+.hover-color-accent:hover {
+  color: var(--color-black-pearl);
+}
+
+/* For no background color */
+.hover-none:hover {
+  background-color: transparent; /* use transparent instead of none */
+}

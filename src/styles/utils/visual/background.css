@@ -1,0 +1,82 @@
+/* Background utilities for base colors */
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.bg-gray-100 {
+  background-color: var(--color-gray-100);
+}
+
+.bg-gray-200 {
+  background-color: var(--color-gray-200);
+}
+
+.bg-gray-300 {
+  background-color: var(--color-gray-300);
+}
+
+.bg-gray-400 {
+  background-color: var(--color-gray-400);
+}
+
+.bg-gray-500 {
+  background-color: var(--color-gray-500);
+}
+
+.bg-gray-600 {
+  background-color: var(--color-gray-600);
+}
+
+.bg-gray-700 {
+  background-color: var(--color-gray-700);
+}
+
+/* Background utilities for accent colors */
+.bg-warm {
+  background-color: var(--color-warm);
+}
+
+.bg-warning {
+  background-color: var(--color-warning-bg);
+}
+
+.bg-warning-content {
+  background-color: var(--color-warning-content);
+}
+
+.bg-success {
+  background-color: var(--color-success-bg);
+}
+
+.bg-success-content {
+  background-color: var(--color-success-content);
+}
+
+.bg-error {
+  background-color: var(--color-error-bg);
+}
+
+.bg-vintage {
+  background-color: var(--color-vintage);
+}
+
+.bg-trust {
+  background-color: var(--color-trust);
+}
+
+.bg-info {
+  background-color: var(--color-info-bg);
+}
+
+.bg-info-content {
+  background-color: var(--color-info-content);
+}
+
+/* Special and utility */
+.bg-transparent {
+  background-color: transparent;
+}

@@ -1,0 +1,146 @@
+.hidden {
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* hide only on specific devices */
+.hide-mobile {
+  display: block;
+}
+
+.hide-tablet {
+  display: block;
+}
+
+.hide-desktop {
+  display: block;
+}
+
+@media (width <= 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media (width >= 1025px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Show only on specific devices */
+.show-mobile,
+.show-tablet,
+.show-desktop {
+  display: none;
+}
+
+@media (width <= 767px) {
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .show-tablet {
+    display: block !important;
+  }
+}
+
+@media (width >= 1025px) {
+  .show-desktop {
+    display: block !important;
+  }
+}
+
+/* For inline-block */
+.show-mobile-inline,
+.show-tablet-inline,
+.show-desktop-inline {
+  display: none;
+}
+
+@media (width <= 767px) {
+  .show-mobile-inline {
+    display: inline-block !important;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .show-tablet-inline {
+    display: inline-block !important;
+  }
+}
+
+@media (width >= 1025px) {
+  .show-desktop-inline {
+    display: inline-block !important;
+  }
+}
+
+/* =================================
+   DISPLAY TYPE UTILITIES
+   ================================= */
+
+/* For flex containers */
+.show-mobile-flex,
+.show-tablet-flex,
+.show-desktop-flex {
+  display: none;
+}
+
+@media (width <= 767px) {
+  .show-mobile-flex {
+    display: flex !important;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .show-tablet-flex {
+    display: flex !important;
+  }
+}
+
+@media (width >= 1025px) {
+  .show-desktop-flex {
+    display: flex !important;
+  }
+}
+
+/* For grid containers */
+.show-mobile-grid,
+.show-tablet-grid,
+.show-desktop-grid {
+  display: none;
+}
+
+@media (width <= 767px) {
+  .show-mobile-grid {
+    display: grid !important;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .show-tablet-grid {
+    display: grid !important;
+  }
+}
+
+@media (width >= 1025px) {
+  .show-desktop-grid {
+    display: grid !important;
+  }
+}

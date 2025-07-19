@@ -1,0 +1,161 @@
+/* Position */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.static {
+  position: static;
+}
+
+/* Top offset utilities */
+.top-0 {
+  top: 0;
+}
+
+.top-1 {
+  top: var(--offset-1);
+}
+
+.top-2 {
+  top: var(--offset-2);
+}
+
+.top-3 {
+  top: var(--offset-3);
+}
+
+.top-4 {
+  top: var(--offset-4);
+}
+
+.top-5 {
+  top: var(--offset-5);
+}
+
+.top-6 {
+  top: var(--offset-6);
+}
+
+/* Left offset utilities */
+.left-0 {
+  left: 0;
+}
+
+.left-1 {
+  left: var(--offset-1);
+}
+
+.left-2 {
+  left: var(--offset-2);
+}
+
+.left-3 {
+  left: var(--offset-3);
+}
+
+.left-4 {
+  left: var(--offset-4);
+}
+
+.left-5 {
+  left: var(--offset-5);
+}
+
+.left-6 {
+  left: var(--offset-6);
+}
+
+/* Right offset utilities */
+.right-0 {
+  right: 0;
+}
+
+.right-1 {
+  right: var(--offset-1);
+}
+
+.right-2 {
+  right: var(--offset-2);
+}
+
+.right-3 {
+  right: var(--offset-3);
+}
+
+.right-4 {
+  right: var(--offset-4);
+}
+
+.right-5 {
+  right: var(--offset-5);
+}
+
+.right-6 {
+  right: var(--offset-6);
+}
+
+/* Bottom offset utilities */
+.bottom-0 {
+  bottom: 0;
+}
+
+.bottom-1 {
+  bottom: var(--offset-1);
+}
+
+.bottom-2 {
+  bottom: var(--offset-2);
+}
+
+.bottom-3 {
+  bottom: var(--offset-3);
+}
+
+.bottom-4 {
+  bottom: var(--offset-4);
+}
+
+.bottom-5 {
+  bottom: var(--offset-5);
+}
+
+.bottom-6 {
+  bottom: var(--offset-6);
+}
+
+/* Z-Index */
+.z-0 {
+  z-index: var(--z-0);
+}
+
+.z-100 {
+  z-index: var(--z-100);
+}
+
+.z-1000 {
+  z-index: var(--z-1000);
+}
+
+.z-2000 {
+  z-index: var(--z-2000);
+}
+
+.z-3000 {
+  z-index: var(--z-3000);
+}
+
+.z-5000 {
+  z-index: var(--z-5000);
+}

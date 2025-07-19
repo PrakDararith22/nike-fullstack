@@ -1,0 +1,74 @@
+/* Display & Flex Container */
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+/* Width */
+.w-full {
+  width: var(--size-full);
+}
+
+.w-screen {
+  width: var(--size-screen-w);
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.w-half {
+  width: 50%;
+}
+
+.w-one-third {
+  width: 33.333%;
+}
+
+.w-two-third {
+  width: 66.666%;
+}
+
+.w-one-fourth {
+  width: 25%;
+}
+
+.w-three-fourth {
+  width: 75%;
+}
+
+/* Height */
+.h-full {
+  height: var(--size-full);
+}
+
+.h-screen {
+  height: var(--size-screen-h);
+}
+
+.h-auto {
+  height: auto;
+}
+
+.h-fit {
+  height: fit-content;
+}
