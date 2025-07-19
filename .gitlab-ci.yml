@@ -1,0 +1,39 @@
+stages:
+  - lint
+  # - build  # Uncomment this if you re-enable the build step
+
+variables:
+  NODE_ENV: development
+
+default:
+  image: node:20
+  before_script:
+    - npm ci
+
+lint-eslint:
+  stage: lint
+  script:
+    - echo "Running ESLint..."
+    - npx eslint . --ext .js
+
+lint-stylelint:
+  stage: lint
+  script:
+    - echo "Running Stylelint..."
+    - npx stylelint "**/*.css"
+
+lint-htmlhint:
+  stage: lint
+  script:
+    - echo "Running HTMLHint..."
+    - npx htmlhint "**/*.html"
+
+lint-prettier:
+  stage: lint
+  script:
+    - echo "Checking Prettier formatting..."
+    - npx prettier --check "**/*.{js,json,css,html}"
+# build-vite:
+#   stage: build
+#   script:
+#     - echo "Running Vite buil

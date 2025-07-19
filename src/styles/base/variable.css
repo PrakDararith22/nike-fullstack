@@ -1,0 +1,197 @@
+@import url("https://db.onlinewebfonts.com/c/2ad24930d996d33544708f0637f7690a?family=Porsche+Next");
+
+:root {
+  --font-primary: "Porsche Next", arial, "Helvetica Neue", helvetica, sans-serif;
+  --font-heading: "Franklin Gothic Medium", "arial", "sans-serif";
+  --font-subheading: "arial", "sans-serif";
+
+  /* Base Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-black-pearl: #010205;
+  --color-gray-100: #f6f6f6;
+  --color-gray-200: #eeeef2;
+  --color-gray-300: #d8d8d8;
+  --color-gray-400: #949598;
+  --color-gray-500: #6b6b6b;
+  --color-gray-600: #404044;
+  --color-gray-700: #262829;
+  --color-dark-hover: #6b6d70;
+
+  /* Thematic / Accent Colors */
+  --color-muted: var(--color-gray-200);
+  --color-warm: #dacaab;
+  --color-warning: #fd6a02;
+  --color-error: #cc1922;
+  --color-vintage: #4b3432;
+  --color-trust: #1a44ea;
+  --color-success-bg: #e4ffec;
+  --color-success-content: #197e10;
+  --color-warning-bg: #fff4d2;
+  --color-warning-content: #f3be00;
+  --color-error-bg: #ffeded;
+  --color-info-bg: #d3e1ff;
+  --color-info-content: #2762ec;
+
+  /* Display (Hero / Large Branding) */
+  --font-display-xl: 400 clamp(2.28rem, 1.24rem + 5.2vw, 7.48rem) / calc(2.125ex + 6px)
+    var(--font-primary);
+  --font-display-lg: 400 clamp(2.03rem, 1.31rem + 3.58vw, 5.61rem) / calc(2.125ex + 6px)
+    var(--font-primary);
+  --font-display-md: 400 clamp(1.8rem, 1.32rem + 2.41vw, 4.21rem) / calc(2.125ex + 6px)
+    var(--font-primary);
+
+  /* Headings */
+  --font-heading-xl: 600 clamp(1.6rem, 1.29rem + 1.56vw, 3.16rem) / calc(2.125ex + 6px)
+    var(--font-primary);
+  --font-heading-lg: 600 clamp(1.42rem, 1.23rem + 0.94vw, 2.37rem) / calc(2.125ex + 6px)
+    var(--font-primary);
+  --font-heading-md: 600 clamp(1.27rem, 1.16rem + 0.51vw, 1.78rem) / calc(2.125ex + 6px)
+    var(--font-primary);
+  --font-heading-sm: 600 clamp(1.13rem, 1.08rem + 0.21vw, 1.33rem) / calc(2.125ex + 6px)
+    var(--font-primary);
+  --font-heading-xs: 600 1rem / calc(2.125ex + 6px) var(--font-primary);
+
+  /* Body Text */
+  --font-body-lg: 400 clamp(1.42rem, 1.23rem + 0.94vw, 2.37rem) / calc(2.125ex + 6px)
+    var(--font-primary);
+  --font-body-md: 400 clamp(1.27rem, 1.16rem + 0.51vw, 1.78rem) / calc(2.125ex + 6px)
+    var(--font-primary);
+  --font-body-sm: 400 clamp(1.13rem, 1.08rem + 0.21vw, 1.33rem) / calc(2.125ex + 6px)
+    var(--font-primary);
+  --font-body-xs: 400 1rem / calc(2.125ex + 6px) var(--font-primary);
+  --font-body-2xs: 400 clamp(0.81rem, 0.77rem + 0.23vw, 0.88rem) / calc(2.125ex + 6px)
+    var(--font-primary);
+  --font-body-3xs: 400 0.75rem / calc(2.125ex + 6px) var(--font-primary);
+
+  /* Gradient */
+  --fade-stops:
+    rgb(0 0 0 / 80%) 0%, rgb(0 0 0 / 80%) 8.1%, rgb(0 0 0 / 80%) 15.5%, rgb(0 0 0 / 80%) 22.5%,
+    rgb(0 0 0 / 78%) 29%, rgb(0 0 0 / 73%) 35.3%, rgb(0 0 0 / 67%) 41.2%, rgb(0 0 0 / 60%) 47.1%,
+    rgb(0 0 0 / 52%) 52.9%, rgb(0 0 0 / 44%) 58.8%, rgb(0 0 0 / 33%) 64.7%, rgb(0 0 0 / 22%) 71%,
+    rgb(0 0 0 / 12%) 77.5%, rgb(0 0 0 / 5%) 84.5%, rgb(0 0 0 / 1%) 91.9%, rgb(0 0 0 / 0%) 100%;
+
+  /* Z-index Scale */
+  --z-0: 0;
+  --z-100: 100;
+  --z-1000: 1000;
+  --z-2000: 2000;
+  --z-3000: 3000;
+  --z-5000: 5000;
+
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --size-full: 100%;
+  --size-screen-w: 100vw;
+  --size-screen-h: 100vh;
+
+  /* Gap */
+  --gap-1: 4px;
+  --gap-2: 8px;
+  --gap-3: 12px;
+  --gap-4: 16px;
+  --gap-5: 20px;
+  --gap-6: 24px;
+  --gap-8: 32px;
+  --gap-10: 40px;
+  --gap-12: 48px;
+
+  /* padding */
+  --padding-1: 4px;
+  --padding-2: 8px;
+  --padding-3: 16px;
+  --padding-4: 24px;
+  --padding-5: 32px;
+  --padding-6: 48px;
+
+  /* Margin variables */
+  --margin-1: 4px;
+  --margin-2: 8px;
+  --margin-3: 12px;
+  --margin-4: 16px;
+  --margin-5: 20px;
+  --margin-6: 24px;
+  --margin-8: 32px;
+  --margin-10: 40px;
+  --margin-12: 48px;
+
+  /* border Radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+
+  /* 🔠 Heading Font Sizes */
+  --font-size-hero: 72.5px; /* Hero headline (very large) */
+  --font-size-display: 50px; /* Large display heading */
+  --font-size-title: 43.1px; /* Prominent section heading */
+  --font-size-subtitle: 33.2px; /* Secondary section heading */
+  --font-size-lead: 25.9px; /* Subsection heading or intro */
+  --font-size-h1: 50px;
+  --font-size-h2: 48px;
+  --font-size-h3: 36px;
+  --font-size-h4: 30px;
+  --font-size-h5: 24px;
+  --font-size-h6: 20px;
+
+  /* 📝 Paragraph Font Sizes */
+  --font-size-p0: 20.3px; /* Large paragraph or UI heading */
+  --font-size-p1: 18px;
+  --font-size-p2: 16px;
+  --font-size-p3: 14px;
+  --font-size-p4: 12px;
+  --font-size-p5: 13px; /* Rare small text */
+  --font-size-p6: 11px; /* Micro/label text */
+
+  /* font weight */
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 900;
+
+  /* line height */
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.2;
+  --line-height-loose: 1.3;
+  --line-height-h3: 1.4; /* For headings like <h3> */
+  --line-height-p: 1.5; /* Paragraphs and body text */
+  --line-height-readable: 1.6; /* For small font sizes */
+  --line-height-loose-2: 1.7; /* For extra airy content */
+  --line-height-xloose: 1.85; /* Consider revising down */
+
+  /* Border widths */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+
+  /* Border styles */
+  --border-style-solid: solid;
+  --border-style-dashed: dashed;
+  --border-style-dotted: dotted;
+
+  /* Shadows */
+  --shadow-low: 0 1px 3px rgb(0 0 0 / 12%);
+  --shadow-medium: 0 4px 6px rgb(0 0 0 / 16%);
+  --shadow-high: 0 10px 20px rgb(0 0 0 / 20%);
+
+  /* Icon size */
+  --icon-default: 1.5rem;
+  --icon-s: 1rem;
+  --icon-l: 2rem;
+  --icon-xl: 3rem;
+
+  /* Offset variables */
+  --offset-1: 4px;
+  --offset-2: 8px;
+  --offset-3: 12px;
+  --offset-4: 16px;
+  --offset-5: 20px;
+  --offset-6: 24px;
+}

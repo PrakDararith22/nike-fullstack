@@ -1,0 +1,7 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "block-no-empty": true,
+    "custom-property-pattern": "^[a-z][a-z0-9-]*$"
+  }
+}

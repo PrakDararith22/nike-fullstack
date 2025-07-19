@@ -1,0 +1,149 @@
+/* ========== Border Core ========== */
+
+/* Default border (1px solid gray-700) */
+.border {
+  border-width: var(--border-width-thin);
+  border-style: var(--border-style-solid);
+  border-color: var(--color-gray-700);
+}
+
+/* ========== Border Width ========== */
+.border-thin {
+  border-width: var(--border-width-thin);
+} /* 1px */
+.border-medium {
+  border-width: var(--border-width-medium);
+} /* 2px */
+.border-thick {
+  border-width: var(--border-width-thick);
+} /* 4px */
+
+/* ========== Border Style ========== */
+.border-solid {
+  border-style: var(--border-style-solid);
+} /* solid */
+.border-dashed {
+  border-style: var(--border-style-dashed);
+} /* dashed */
+.border-dotted {
+  border-style: var(--border-style-dotted);
+} /* dotted */
+
+/* ========== Border Color ========== */
+.border-default {
+  border-color: var(--color-gray-700);
+} /* default gray */
+.border-black {
+  border-color: var(--color-black);
+} /* black */
+.border-white {
+  border-color: var(--color-white);
+} /* white */
+
+/* You can add more color-based borders as needed: */
+.border-gray-300 {
+  border-color: var(--color-gray-300);
+}
+
+.border-gray-400 {
+  border-color: var(--color-gray-400);
+}
+
+.border-gray-500 {
+  border-color: var(--color-gray-500);
+}
+
+.border-gray-600 {
+  border-color: var(--color-gray-600);
+}
+
+/* ========== Border Sides ========== */
+
+/* Single-side border with default color and solid style */
+.border-t {
+  border-top: var(--border-width-thin) var(--border-style-solid) var(--color-gray-700);
+}
+
+.border-b {
+  border-bottom: var(--border-width-thin) var(--border-style-solid) var(--color-gray-700);
+}
+
+.border-l {
+  border-left: var(--border-width-thin) var(--border-style-solid) var(--color-gray-700);
+}
+
+.border-r {
+  border-right: var(--border-width-thin) var(--border-style-solid) var(--color-gray-700);
+}
+
+/* ========== Border Remove ========== */
+.border-none {
+  border: none !important;
+} /* Remove all borders */
+
+/* ========== Box Shadows ========== */
+.shadow-low {
+  box-shadow: var(--shadow-low);
+} /* subtle shadow */
+.shadow-medium {
+  box-shadow: var(--shadow-medium);
+} /* medium shadow */
+.shadow-high {
+  box-shadow: var(--shadow-high);
+} /* strong shadow */
+
+/* ========== Composite Border Presets ========== */
+
+/* Pre-defined border combinations using your root variables */
+
+.border-inset-black-2px {
+  border: var(--border-inset-black-2px); /* 2px inset black border (all sides) */
+}
+
+.border-bottom-solid-black-2px {
+  border-bottom: var(--border-bottom-solid-black-2px); /* 2px solid black bottom border */
+}
+
+.border-solid-gray-500-2px {
+  border: var(--border-solid-gray-500-2px); /* 2px solid gray-500 on all sides */
+}
+
+.border-top-bottom-solid-gray-300-1px {
+  border-top: var(--border-top-bottom-solid-gray-300-1px); /* 1px solid gray-300 top */
+  border-bottom: var(--border-top-bottom-solid-gray-300-1px); /* 1px solid gray-300 bottom */
+}
+
+.border-left-solid-gray-300-1px {
+  border-left: var(--border-left-solid-gray-300-1px); /* 1px solid gray-300 left only */
+}
+
+.border-left-solid-gray-600-1px {
+  border-left: var(--border-left-solid-gray-600-1px); /* 1px solid gray-600 left only */
+}
+
+.border-solid-white-2px {
+  border: var(--border-solid-white-2px); /* 2px solid white on all sides */
+}
+
+.border-solid-gray-400-2px {
+  border: var(--border-solid-gray-400-2px); /* 2px solid gray-400 all sides */
+}
+
+.border-solid-transparent-2px {
+  border: var(--border-solid-transparent-2px); /* 2px solid transparent (invisible border) */
+}
+
+/* ========== Optional Thematic Variants (Uncomment if needed) ========== */
+
+.border-primary {
+  border-color: var(--color-trust);
+}
+
+/* blue tone */
+.border-warning {
+  border-color: var(--color-warning);
+}
+
+.border-error {
+  border-color: var(--color-error);
+}
