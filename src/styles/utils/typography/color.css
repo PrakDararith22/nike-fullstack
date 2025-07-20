@@ -1,0 +1,35 @@
+.text-white {
+  color: var(--white);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-disable {
+  color: var(--color-gray-500);
+}
+
+.text-warning {
+  color: var(--color-warning);
+}
+
+.text-success {
+  color: var(--color-success-content);
+}
+
+.text-error {
+  color: var(--color-error);
+}
+
+.text-vintage {
+  color: var(--color-vintage);
+}
+
+.text-trust {
+  color: var(--color-trust);
+}
+
+.text-info {
+  color: var(--color-info-content);
+}

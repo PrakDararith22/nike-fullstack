@@ -1,82 +1,118 @@
-/* Background utilities for base colors */
-.bg-white {
-  background-color: var(--color-white);
+/* Background Utility Classes */
+.bg-transparent {
+  background-color: transparent !important;
 }
 
-.bg-black {
-  background-color: var(--color-black);
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-gray-50 {
+  background-color: var(--gray-50);
 }
 
 .bg-gray-100 {
-  background-color: var(--color-gray-100);
+  background-color: var(--gray-100);
 }
 
 .bg-gray-200 {
-  background-color: var(--color-gray-200);
+  background-color: var(--gray-200);
 }
 
 .bg-gray-300 {
-  background-color: var(--color-gray-300);
+  background-color: var(--gray-300);
 }
 
 .bg-gray-400 {
-  background-color: var(--color-gray-400);
+  background-color: var(--gray-400);
 }
 
 .bg-gray-500 {
-  background-color: var(--color-gray-500);
+  background-color: var(--gray-500);
 }
 
 .bg-gray-600 {
-  background-color: var(--color-gray-600);
+  background-color: var(--gray-600);
 }
 
 .bg-gray-700 {
-  background-color: var(--color-gray-700);
+  background-color: var(--gray-700);
 }
 
-/* Background utilities for accent colors */
-.bg-warm {
-  background-color: var(--color-warm);
+.bg-gray-800 {
+  background-color: var(--gray-800);
 }
 
-.bg-warning {
-  background-color: var(--color-warning-bg);
+.bg-gray-850 {
+  background-color: var(--gray-850);
 }
 
-.bg-warning-content {
-  background-color: var(--color-warning-content);
+.bg-gray-900 {
+  background-color: var(--gray-900);
 }
 
-.bg-success {
-  background-color: var(--color-success-bg);
+.bg-gray-950 {
+  background-color: var(--gray-950);
 }
 
-.bg-success-content {
-  background-color: var(--color-success-content);
+.bg-black {
+  background-color: var(--black);
 }
 
-.bg-error {
-  background-color: var(--color-error-bg);
+/* Orange Work Utilities */
+.bg-warning-light {
+  background-color: #fd6a02;
 }
 
-.bg-vintage {
-  background-color: var(--color-vintage);
+.bg-warning-medium {
+  background-color: #ff5000;
 }
 
-.bg-trust {
-  background-color: var(--color-trust);
+.bg-warning-dark {
+  background-color: #fa5400;
 }
 
-.bg-info {
-  background-color: var(--color-info-bg);
+/* Green Work Utilities */
+.bg-success-light {
+  background-color: #197e10;
 }
 
-.bg-info-content {
-  background-color: var(--color-info-content);
+.bg-success-medium {
+  background-color: #128a09;
 }
 
-/* Special and utility */
-.bg-transparent {
-  background-color: transparent;
+.bg-complete-dark {
+  background-color: #007d48;
+}
+
+.bg-error-strong {
+  background-color: #cc1922;
+}
+
+.bg-caution-medium {
+  background-color: #f3be00;
+}
+
+.bg-info-light {
+  background-color: #2762ec;
+}
+
+.bg-info-medium {
+  background-color: #1a44ea;
+}
+
+.bg-info-dark {
+  background-color: #1212125c;
+}
+
+.bg-contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

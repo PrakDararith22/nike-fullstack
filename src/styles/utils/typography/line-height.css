@@ -1,0 +1,31 @@
+.leading-tight {
+  line-height: var(--line-height-tight);
+}
+
+.leading-normal {
+  line-height: var(--line-height-normal);
+}
+
+.leading-loose {
+  line-height: var(--line-height-loose);
+}
+
+.leading-loose-2 {
+  line-height: var(--line-height-loose-2);
+}
+
+.leading-xloose {
+  line-height: var(--line-height-xloose);
+}
+
+.leading-h3 {
+  line-height: var(--line-height-h3);
+}
+
+.leading-p {
+  line-height: var(--line-height-p);
+}
+
+.leading-readable {
+  line-height: var(--line-height-readable);
+}

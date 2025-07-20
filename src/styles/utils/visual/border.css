@@ -20,24 +20,24 @@
 
 /* ========== Border Style ========== */
 .border-solid {
-  border-style: var(--border-style-solid);
+  border-style: solid;
 } /* solid */
 .border-dashed {
-  border-style: var(--border-style-dashed);
+  border-style: dashed;
 } /* dashed */
 .border-dotted {
-  border-style: var(--border-style-dotted);
+  border-style: dotted;
 } /* dotted */
 
 /* ========== Border Color ========== */
 .border-default {
-  border-color: var(--color-gray-700);
+  border-color: var(--gray-850);
 } /* default gray */
 .border-black {
-  border-color: var(--color-black);
+  border-color: var(--black);
 } /* black */
 .border-white {
-  border-color: var(--color-white);
+  border-color: var(--white);
 } /* white */
 
 /* You can add more color-based borders as needed: */
@@ -61,19 +61,19 @@
 
 /* Single-side border with default color and solid style */
 .border-t {
-  border-top: var(--border-width-thin) var(--border-style-solid) var(--color-gray-700);
+  border-top: var(--border-width-thin) solid var(--gray-800);
 }
 
 .border-b {
-  border-bottom: var(--border-width-thin) var(--border-style-solid) var(--color-gray-700);
+  border-bottom: var(--border-width-thin) solid var(--gray-800);
 }
 
 .border-l {
-  border-left: var(--border-width-thin) var(--border-style-solid) var(--color-gray-700);
+  border-left: var(--border-width-thin) solid var(--gray-800);
 }
 
 .border-r {
-  border-right: var(--border-width-thin) var(--border-style-solid) var(--color-gray-700);
+  border-right: var(--border-width-thin) solid var(--gray-800);
 }
 
 /* ========== Border Remove ========== */
@@ -90,60 +90,4 @@
 } /* medium shadow */
 .shadow-high {
   box-shadow: var(--shadow-high);
-} /* strong shadow */
-
-/* ========== Composite Border Presets ========== */
-
-/* Pre-defined border combinations using your root variables */
-
-.border-inset-black-2px {
-  border: var(--border-inset-black-2px); /* 2px inset black border (all sides) */
-}
-
-.border-bottom-solid-black-2px {
-  border-bottom: var(--border-bottom-solid-black-2px); /* 2px solid black bottom border */
-}
-
-.border-solid-gray-500-2px {
-  border: var(--border-solid-gray-500-2px); /* 2px solid gray-500 on all sides */
-}
-
-.border-top-bottom-solid-gray-300-1px {
-  border-top: var(--border-top-bottom-solid-gray-300-1px); /* 1px solid gray-300 top */
-  border-bottom: var(--border-top-bottom-solid-gray-300-1px); /* 1px solid gray-300 bottom */
-}
-
-.border-left-solid-gray-300-1px {
-  border-left: var(--border-left-solid-gray-300-1px); /* 1px solid gray-300 left only */
-}
-
-.border-left-solid-gray-600-1px {
-  border-left: var(--border-left-solid-gray-600-1px); /* 1px solid gray-600 left only */
-}
-
-.border-solid-white-2px {
-  border: var(--border-solid-white-2px); /* 2px solid white on all sides */
-}
-
-.border-solid-gray-400-2px {
-  border: var(--border-solid-gray-400-2px); /* 2px solid gray-400 all sides */
-}
-
-.border-solid-transparent-2px {
-  border: var(--border-solid-transparent-2px); /* 2px solid transparent (invisible border) */
-}
-
-/* ========== Optional Thematic Variants (Uncomment if needed) ========== */
-
-.border-primary {
-  border-color: var(--color-trust);
-}
-
-/* blue tone */
-.border-warning {
-  border-color: var(--color-warning);
-}
-
-.border-error {
-  border-color: var(--color-error);
 }

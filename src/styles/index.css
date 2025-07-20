@@ -10,7 +10,9 @@ utility styles
 */
 
 /* interactive styles */
+@import url("./utils/interactive/hover.css");
 @import url("./utils/interactive/overflow.css");
+@import url("./utils/interactive/transition.css");
 @import url("./utils/interactive/visibility.css");
 
 /* layout styles */
@@ -19,12 +21,17 @@ utility styles
 @import url("./utils/layout/grid.css");
 @import url("./utils/layout/position.css");
 @import url("./utils/layout/spacing.css");
-@import url("./utils/layout/hover.css");
+
+/* typography styles */
+@import url("./utils/typography/alignment.css");
+@import url("./utils/typography/color.css");
+@import url("./utils/typography/font-weight.css");
+@import url("./utils/typography/line-height.css");
+@import url("./utils/typography/size.css");
 
 /* visual styles */
 @import url("./utils/visual/background.css");
 @import url("./utils/visual/border.css");
-@import url("./utils/visual/gradient.css");
 @import url("./utils/visual/radius.css");
 @import url("./utils/visual/outline.css");
-@import url("./utils/interactive/hover.css");
+@import url("./utils/visual/object-fit.css");
