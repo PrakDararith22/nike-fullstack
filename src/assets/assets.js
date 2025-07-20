@@ -1,3 +1,6 @@
+// brand logo
+import nike from "./brand-logo/nike.svg";
+
 // director icons
 import bell from "./icons/indicator/bell.svg";
 import checkCircle from "./icons/indicator/check-circle.svg";
@@ -121,4 +124,5 @@ export {
   truckFast,
   mountain,
   car,
+  nike,
 };
