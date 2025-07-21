@@ -5,3 +5,4 @@ import "./base/search-input/search-input";
 
 import "./base-header/base-header";
 import "./hero-banner/hero-banner";
+import "./TopMessageBar/top-message-bar";

@@ -1,0 +1,9 @@
+.top-message-bar {
+  height: 75px;
+}
+
+@media (width <= 767px) {
+  .top-message-bar {
+    height: 60px;
+  }
+}
