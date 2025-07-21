@@ -1,0 +1,23 @@
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.aspect-poster {
+  aspect-ratio: 2 / 3;
+}
+
+.aspect-landscape {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-wide {
+  aspect-ratio: 21 / 9;
+}
+
+.aspect-auto {
+  aspect-ratio: auto;
+}

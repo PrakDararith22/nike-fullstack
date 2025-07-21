@@ -6,6 +6,14 @@
   flex-shrink: 1;
 }
 
+.grow-none {
+  flex-grow: 0;
+}
+
+.shrink-none {
+  flex-shrink: 0;
+}
+
 /* Direction */
 .flex-row {
   flex-direction: row;

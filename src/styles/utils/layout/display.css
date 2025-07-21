@@ -19,6 +19,10 @@
   display: inline-flex;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Width */
 .w-full {
   width: var(--size-full);
