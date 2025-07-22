@@ -1,0 +1,90 @@
+{
+  "products": [
+    {
+      "id": "DQ8426-100",
+      "name": "Air Jordan 1 Low",
+      "brand": "Jordan",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Men",
+      "price": {
+        "currency": "USD",
+        "amount": 90.0,
+        "originalPrice": 90.0,
+        "salePrice": null,
+        "onSale": false
+      },
+      "colors": [
+        {
+          "name": "White/Black/White",
+          "hex": "#FFFFFF",
+          "images": [
+            "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/air-jordan-1-low-shoes-6Q1tFM.png"
+          ]
+        }
+      ],
+      "sizes": [
+        {
+          "us": "8",
+          "uk": "7",
+          "eu": "41",
+          "cm": "26",
+          "inStock": true,
+          "quantity": 15
+        },
+        {
+          "us": "9",
+          "uk": "8",
+          "eu": "42.5",
+          "cm": "27",
+          "inStock": true,
+          "quantity": 8
+        },
+        {
+          "us": "10",
+          "uk": "9",
+          "eu": "44",
+          "cm": "28",
+          "inStock": false,
+          "quantity": 0
+        }
+      ],
+      "description": "Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's familiar yet always fresh.",
+      "features": [
+        "Leather and synthetic upper",
+        "Air-Sole unit in heel",
+        "Solid rubber outsole",
+        "Color Shown: White/Black/White"
+      ],
+      "materials": ["Upper: Leather/Synthetic", "Sole: Rubber"],
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/main-image.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/side-view.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/back-view.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/sole-view.png"
+      ],
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 23,
+        "releaseDate": "2021-04-15T00:00:00Z",
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"],
+      "createdAt": "2021-04-15T10:30:00Z",
+      "updatedAt": "2024-01-15T14:22:00Z"
+    }
+  ]
+}
