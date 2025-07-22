@@ -11,7 +11,7 @@
 }
 
 .text-warning {
-  color: var(--color-warning);
+  color: var(--orange-400);
 }
 
 .text-success {
@@ -32,4 +32,32 @@
 
 .text-info {
   color: var(--color-info-content);
+}
+
+.text-gray-500 {
+  color: var(--gray-500);
+}
+
+.text-gray-600 {
+  color: var(--gray-600);
+}
+
+.text-gray-700 {
+  color: var(--gray-700);
+}
+
+.text-gray-800 {
+  color: var(--gray-800);
+}
+
+.text-gray-850 {
+  color: var(--gray-850);
+}
+
+.text-gray-900 {
+  color: var(--gray-900);
+}
+
+.text-gray-950 {
+  color: var(--gray-950);
 }
