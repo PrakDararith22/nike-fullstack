@@ -1,9 +1,8 @@
 import "@components";
-import image from "../assets/shoe.png";
 
-export function homePage() {
+export function productDetail() {
   return /* html */ `
-    <div class="page home-page flex flex-col gap-2">
+    <div class="page home-page">
        
         <base-header></base-header>
         <top-message-bar linktext="Join us!"></top-message-bar>
@@ -58,23 +57,16 @@ export function homePage() {
         ></showcase-card>
 
         <!-- product show case -->
-        <div 
-        class="product-show-case  whitespace-nowrap  pt-8 pl-5 ">
-        <h2 class="font-medium "> Shop Our Icons </h2>
-            <div class="pt-5 overflow-x-auto scrollbar-hidden">
-                <showcase-card 
-                class="product-grid-card inline-block mr-2"
-                image="src/assets/banner.png" 
-                layout="bottomcenter" 
-                cta="shop"
-                ></showcase-card>
-                <showcase-card 
-                class=" product-grid-card inline-block mr-2"
-                image="src/assets/banner.png" 
-                layout="bottomcenter" 
-                cta="shop"
-                ></showcase-card>
-            </div>
+        <div class="product-show-case flex overflow-x-auto">
+            <showcase-card 
+            image="src/assets/banner.png" 
+            layout="bottomcenter" cta="shop"
+            ></showcase-card>
+            <showcase-card 
+            image="src/assets/banner.png" 
+            layout="bottomcenter" 
+            cta="shop"
+            ></showcase-card>
         </div>
 
         <base-footer></base-footer>

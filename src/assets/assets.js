@@ -67,7 +67,7 @@ import youtube from "./icons/social-media/youtube.svg";
 import facebookCircle from "./icons/social-media/facebook-circle.svg";
 import xCircle from "./icons/social-media/x-circle.svg";
 import instagramCircle from "./icons/social-media/instagram-circle.svg";
-import youtubeCircle from "./icons/social-media/youtube-circle.svg";
+import youtubeCircle from "./icons/social-media/youtube-circle1.svg";
 
 // navigation
 import arrow from "./icons/navigation/arrow.svg";

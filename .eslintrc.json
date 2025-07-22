@@ -19,7 +19,7 @@
           ["@components", "./src/components/index.js"],
           ["@base-components", "./src/components/base-component.js"]
         ],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".svg"]
       }
     }
   },
