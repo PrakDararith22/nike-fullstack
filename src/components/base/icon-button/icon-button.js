@@ -2,7 +2,7 @@ import "./icon-button.css";
 
 class IconButton extends BaseComponent {
   static get observedAttributes() {
-    return ["icon", "size", "toggle-icon", "disabled", "text", "href"];
+    return ["icon", "size", "toggle-icon", "disabled", "text", "href", "action"];
   }
 
   constructor() {
@@ -16,11 +16,11 @@ class IconButton extends BaseComponent {
     this.isToggled = false;
     this.disabled = false;
     this.href = "";
+    this.action = "";
   }
 
   connectedCallback() {
     super.connectedCallback();
-    this.action = this.getAttribute("icon-button");
     this.updateTemplate();
     this.addEventListener("click", event => {
       if (this.disabled) {
@@ -39,10 +39,9 @@ class IconButton extends BaseComponent {
       }
       if (this.action) {
         this.dispatchEvent(
-          new CustomEvent("toggle-panel", {
+          new CustomEvent("icon-button", {
             bubbles: true,
-            composed: true,
-            detail: { panel: this.action },
+            detail: { action: this.action },
           })
         );
       }
@@ -98,6 +97,10 @@ class IconButton extends BaseComponent {
           this.href = newValue || "";
           break;
         }
+        case "action": {
+          this.action = newValue || "";
+          break;
+        }
         default: {
           console.warn(`Unhandled observed attribute: ${name}`);
           break;
@@ -136,7 +139,7 @@ class IconButton extends BaseComponent {
       isLink
         ? `<a href="${this.href}" class="icon-button border-none bg-transparent flex items-center justify-center hover-bg-primary rounded-sm p-1"
             style="--icon-scale: ${currentSize}; transform: scale(var(--icon-scale));"
-            ${this.disabled ? "aria-disabled='true' " : ""}>
+            ${this.disabled ? "aria-disabled='true' tabindex='-1'" : ""}>
             ${buttonContent}
           </a>`
         : `<button class="icon-button border-none bg-transparent flex items-center justify-center hover-bg-primary rounded-sm p-1"
