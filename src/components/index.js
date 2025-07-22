@@ -8,3 +8,4 @@ import "./showcase-card/showcase-card";
 import "./TopMessageBar/top-message-bar";
 import "./base-footer/base-footer";
 import "./base-accordion/base-accordion";
+import "./product-card/product-card";
