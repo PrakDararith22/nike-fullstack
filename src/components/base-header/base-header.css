@@ -1,6 +1,8 @@
 .base-header {
   height: 66px;
   padding: 0 20px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
 }
 
 @media (width >= 1024px) {

@@ -36,21 +36,21 @@ class BaseHeader extends BaseComponent {
 
   updateTemplate() {
     this.template = /* html */ `
-    <div class="base-header layout-grid items-center ">
+    <div class="base-header items-center">
       <!-- logo section -->
-      <div class="col-third-sm justify-self-start">
+      <div class="base-header-span justify-self-start">
         <icon-button icon="${nike}" size="2"></icon-button>
       </div>
 
       <!-- menu section -->
-      <div class="col-third-sm justify-self-center">
+      <div class="base-header-span justify-self-center">
         <div class="flex gap-2 hide-mobile">
           ${this.menu.map(item => `<a>${item}</a>`).join("")}
         </div>
       </div>
 
       <!-- icon section -->
-      <div class="col-third-sm justify-self-end">
+      <div class="base-header-span justify-self-end">
         <div class="flex">
         <search-input text="search" class="hide-mobile"></search-input>
           <icon-button icon="${cartEmpty}"></icon-button>
