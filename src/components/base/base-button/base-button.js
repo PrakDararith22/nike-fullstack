@@ -1,6 +1,8 @@
+import { heart } from "@assets";
+
 class BaseButton extends BaseComponent {
   static get observedAttributes() {
-    return ["text", "variant", "icon", "type"];
+    return ["text", "variant", "icon", "type", "size"];
   }
 
   constructor() {
@@ -9,6 +11,7 @@ class BaseButton extends BaseComponent {
     this.variant = "primary";
     this.icon = "";
     this.type = "action";
+    this.size = "";
   }
 
   connectedCallback() {
@@ -35,6 +38,10 @@ class BaseButton extends BaseComponent {
           this.type = newValue || "";
           break;
         }
+        case "size": {
+          this.type = newValue || "";
+          break;
+        }
         default: {
           console.warn(`Unhandled observed attribute: ${name}`);
           break;
@@ -46,9 +53,9 @@ class BaseButton extends BaseComponent {
 
   updateTemplate() {
     const variantMap = {
-      primary: " bg-black text-white border-none",
-      secondary: " bg-white text-black border-thin",
-      default: " bg-black text-white",
+      primary: " bg-black text-white",
+      secondary: "bg-white text-black ",
+      default: " bg-black text-white ",
     };
 
     const typeMap = {
@@ -56,10 +63,20 @@ class BaseButton extends BaseComponent {
       status: " rounded",
     };
 
+    const sizeMap = {
+      small: " py-2",
+      medium: " py-4",
+      default: " py-2",
+    };
+
     this.template = `
-    <button class="flex items-center justify-center gap-2 outline-none  w-full px-5 py-2 text-h5 ${typeMap[this.type]} ${variantMap[this.variant]}">
+    <button class="flex items-center border justify-center gap-2 outline-none  w-full px-5 text-p1 font-medium 
+  ${sizeMap[this.size] || sizeMap.default} 
+  ${typeMap[this.type]} 
+  ${variantMap[this.variant]}">
       ${this.text}
-      <img src="${this.icon}" />
+      <img src="${this.icon}" class="object-contain" style="width: 18px; height: auto;" />
+
     </button>
     `;
     this.render();

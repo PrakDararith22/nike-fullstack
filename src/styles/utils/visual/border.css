@@ -1,10 +1,12 @@
-/* ========== Border Core ========== */
+/* ========== Border Remove ========== */
+.border-none {
+  border: none;
+}
 
-/* Default border (1px solid gray-700) */
 .border {
   border-width: var(--border-width-thin);
-  border-style: var(--border-style-solid);
-  border-color: var(--color-gray-700);
+  border-style: solid;
+  border-color: var(--gray-600);
 }
 
 /* ========== Border Width ========== */
@@ -31,7 +33,7 @@
 
 /* ========== Border Color ========== */
 .border-default {
-  border-color: var(--gray-850);
+  border-color: var(--gray-600);
 } /* default gray */
 .border-black {
   border-color: var(--black);
@@ -42,44 +44,44 @@
 
 /* You can add more color-based borders as needed: */
 .border-gray-300 {
-  border-color: var(--color-gray-300);
+  border-color: var(--gray-300);
 }
 
 .border-gray-400 {
-  border-color: var(--color-gray-400);
+  border-color: var(--gray-400);
 }
 
 .border-gray-500 {
-  border-color: var(--color-gray-500);
+  border-color: var(--gray-500);
 }
 
 .border-gray-600 {
-  border-color: var(--color-gray-600);
+  border-color: var(--gray-600);
 }
 
 /* ========== Border Sides ========== */
 
 /* Single-side border with default color and solid style */
 .border-t {
-  border-top: var(--border-width-thin) solid var(--gray-800);
+  border-top: var(--border-width-thin) solid var(--gray-600);
+}
+
+.border-y {
+  border-top: var(--border-width-thin) solid var(--gray-600);
+  border-bottom: var(--border-width-thin) solid var(--gray-600);
 }
 
 .border-b {
-  border-bottom: var(--border-width-thin) solid var(--gray-800);
+  border-bottom: var(--border-width-thin) solid var(--gray-600);
 }
 
 .border-l {
-  border-left: var(--border-width-thin) solid var(--gray-800);
+  border-left: var(--border-width-thin) solid var(--gray-600);
 }
 
 .border-r {
-  border-right: var(--border-width-thin) solid var(--gray-800);
+  border-right: var(--border-width-thin) solid var(--gray-600);
 }
-
-/* ========== Border Remove ========== */
-.border-none {
-  border: none !important;
-} /* Remove all borders */
 
 /* ========== Box Shadows ========== */
 .shadow-low {
