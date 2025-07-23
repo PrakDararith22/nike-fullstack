@@ -31,10 +31,10 @@ class searchInput extends BaseComponent {
 
   updateTemplate() {
     this.template = `
-    <div class="search-input bg-gray-200 flex items-center px-3 border border-medium rounded-sm w-full">
+    <div class="search-input bg-gray-200 flex items-center px-3 rounded-lg w-full">
       <icon-button icon="${search}"></icon-button>
       <input type="text" placeholder="${this.text}" 
-      class="outline-none border-none body-sm w-full bg-transparent"/>
+      class="outline-none border-none body-sm w-full bg-transparent text-p1 font-semibold text-gray-500"/>
     </div>
     `;
 

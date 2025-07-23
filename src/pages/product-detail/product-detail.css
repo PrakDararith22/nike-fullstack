@@ -1,0 +1,28 @@
+.product-list {
+  margin: 0 12px;
+}
+
+.grid-container {
+  display: grid;
+  grid-auto-flow: column; /* Items flow horizontally */
+  grid-auto-columns: clamp(300px, 25vw, 700px); /* Each column is 200px */
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.product-detail-size {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (width >= 1024px) {
+  .product-detail-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-list {
+    margin: 0 48px;
+  }
+}

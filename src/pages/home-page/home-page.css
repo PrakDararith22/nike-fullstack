@@ -1,0 +1,31 @@
+.product-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.product-grid-card {
+  width: 60%;
+  max-width: 500px;
+}
+
+@media (width >= 769px) {
+  .product-grid {
+    margin: 0 48px;
+    display: grid;
+    gap: 12px;
+  }
+}
+
+@media (width >= 1024px) {
+  .product-grid {
+    margin: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .product-grid-card {
+    width: 25%;
+    max-width: 400px;
+  }
+}

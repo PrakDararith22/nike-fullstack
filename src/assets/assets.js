@@ -33,6 +33,8 @@ import plus from "./icons/interface-controll/plus.svg";
 import minus from "./icons/interface-controll/minus.svg";
 import cross from "./icons/interface-controll/cross.svg";
 import search from "./icons/interface-controll/search-.svg";
+import plusWhite from "./icons/interface-controll/plus-white.svg";
+import minusWhite from "./icons/interface-controll/minus-white.svg";
 
 // payments icons
 import americanExpressMd from "./icons/payments/american-express-md.svg";
@@ -62,6 +64,10 @@ import pinterest from "./icons/social-media/pinterest.svg";
 import telegram from "./icons/social-media/telegram.svg";
 import x from "./icons/social-media/x.svg";
 import youtube from "./icons/social-media/youtube.svg";
+import facebookCircle from "./icons/social-media/facebook-circle.svg";
+import xCircle from "./icons/social-media/x-circle.svg";
+import instagramCircle from "./icons/social-media/instagram-circle.svg";
+import youtubeCircle from "./icons/social-media/youtube-circle1.svg";
 
 // navigation
 import arrow from "./icons/navigation/arrow.svg";
@@ -125,4 +131,10 @@ export {
   mountain,
   car,
   nike,
+  plusWhite,
+  minusWhite,
+  facebookCircle,
+  xCircle,
+  youtubeCircle,
+  instagramCircle,
 };

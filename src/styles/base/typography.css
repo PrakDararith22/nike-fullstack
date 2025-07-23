@@ -16,7 +16,6 @@ h5,
 h6 {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-bold, 700);
-  margin: 0 0 0.5em;
   line-height: 1.2;
 }
 
