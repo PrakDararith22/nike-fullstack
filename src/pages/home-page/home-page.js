@@ -1,5 +1,5 @@
 import "@components";
-import image from "../assets/shoe.png";
+import "./home-page.css";
 
 export function homePage() {
   return /* html */ `
