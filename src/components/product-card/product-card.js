@@ -11,7 +11,6 @@ class ProductCard extends BaseComponent {
     this.status = "";
     this.category = "";
     this.price = "";
-    this.type = "list";
     this.image = "";
   }
 
@@ -58,49 +57,16 @@ class ProductCard extends BaseComponent {
   }
 
   updateTemplate() {
-    const isDetailView = this.type === "detail";
-    const isListView = this.type === "list";
-    console.log(isDetailView);
-
     this.template = /* html */ `
-    <div>
-
-    <!-- product page detail view -->
-      <div class="px-4 ${isDetailView ? "" : "hidden"}">
-        <h5 class="text-warning font-semibold">${this.status}<h5>
-        <h4 class="font-medium">${this.title}</h4>
-        <p class="text-p2 font-regular">${this.category}</p>
-        <p class="text-p2 font-regular pb-3">8 colours</p>
-        <h4 class="font-regular">${this.price}</h4>
-      </div>
+    <div styles="min-width: 350px">
 
       <img src="${this.image}" alt="Banner" class="w-full h-full relative z-base"/>
-
-       <!-- product list detail -->
-      <div class="px-4 ${isListView ? "" : "hidden"}">
+      <div>
         <h5 class="text-warning font-semibold">${this.status}<h5>
         <h4 class="font-medium">${this.title}</h4>
         <p class="text-p2 font-regular">${this.category}</p>
         <p class="text-p2 font-regular pb-3">8 colours</p>
         <h4 class="font-regular">${this.price}</h4>
-      </div>
-     
-
-
-
-
-      
-      <div class="flex flex-col gap-2 ${isDetailView ? "" : "hidden"}">
-        <div class="flex justify-between items-center ">
-          <h5 class="font-semibold">Select Size</h5> 
-          <a>Size Guide</a> 
-        </div>
-        <div>
-          <base-button variant="secondary" type="status" text="sffsf"></base-button>
-          <base-button variant="secondary" type="status" text="sffsf"></base-button>
-          <base-button variant="secondary" type="status" text="sffsf"></base-button>
-          <base-button variant="secondary" type="status" text="sffsf"></base-button>
-        </div>
       </div>
 
     </div>
