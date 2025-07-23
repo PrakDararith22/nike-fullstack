@@ -2,7 +2,7 @@ import "@components";
 
 class BaseAccordion extends BaseComponent {
   static get observedAttributes() {
-    return ["icon", "toggle-icon", "title"];
+    return ["icon", "toggle-icon", "title", "no-border"];
   }
 
   constructor() {
@@ -11,6 +11,7 @@ class BaseAccordion extends BaseComponent {
     this.toggleIcon = "";
     this.open = false;
     this.title = "";
+    this.Noborder = "";
   }
 
   connectedCallback() {
@@ -44,6 +45,10 @@ class BaseAccordion extends BaseComponent {
           this.title = newValue || "";
           break;
         }
+        case "no-border": {
+          this.Noborder = newValue !== null;
+          break;
+        }
         default: {
           console.warn(`Unhandled observed attribute: ${name}`);
           break;
@@ -55,15 +60,13 @@ class BaseAccordion extends BaseComponent {
 
   updateTemplate() {
     this.template = /* html */ `
-    <div class="">
-        <div class="flex items-center justify-between py-2 "> 
+    <div class=" ${this.Noborder ? "" : "border-y"}">
+        <div class="flex items-center justify-between py-2"> 
             <p>${this.title}</p>
             <icon-button icon="${this.icon}" toggle-icon="${this.toggleIcon}" action="accordion" ></icon-button>
         </div>
         <div id="link-section" class="hidden flex flex-col gap-2">
-            <a> sdfsdf </a>
-            <a> sdfsdf </a>
-            <a> sdfsdf </a>
+          <h1> in progress </h1>
         </div>
     </div>
     `;
