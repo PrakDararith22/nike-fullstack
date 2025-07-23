@@ -52,23 +52,26 @@ class BaseFooter extends BaseComponent {
 
         <div>
         
-          <div class="hide-desktop text-white font-bold text-p2">
+          <div class="hide-desktop text-white font-bold text-p2 ">
             <base-accordion 
             icon="${plusWhite}" 
             toggle-icon="${minusWhite}"
             title="GET HELP"
+            no-border
             ></base-accordion>
 
             <base-accordion 
             icon="${plusWhite}" 
             toggle-icon="${minusWhite}"
             title="ABOUT NIKE"
+            no-border
             ></base-accordion>
 
             <base-accordion 
             icon="${plusWhite}" 
             toggle-icon="${minusWhite}"
             title="NIKE APPS"
+             no-border
             ></base-accordion>
          </div>
 
