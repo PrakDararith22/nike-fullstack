@@ -39,7 +39,7 @@ class BaseButton extends BaseComponent {
           break;
         }
         case "size": {
-          this.type = newValue || "";
+          this.size = newValue || "";
           break;
         }
         default: {
@@ -65,8 +65,9 @@ class BaseButton extends BaseComponent {
 
     const sizeMap = {
       small: " py-2",
-      medium: " py-4",
-      default: " py-2",
+      medium: " py-3 rounded-xl",
+      large: " py-4 rounded-xl",
+      default: " py-2 ",
     };
 
     this.template = `

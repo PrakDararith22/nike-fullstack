@@ -1,5 +1,6 @@
 // brand logo
 import nike from "./brand-logo/nike.svg";
+import jordan from "./brand-logo/jordan.svg";
 
 // director icons
 import bell from "./icons/indicator/bell.svg";
@@ -137,4 +138,5 @@ export {
   xCircle,
   youtubeCircle,
   instagramCircle,
+  jordan,
 };
