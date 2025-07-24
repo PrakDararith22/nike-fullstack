@@ -1,0 +1,17 @@
+.cart {
+  max-width: 1200px;
+  height: 68.05vh;
+}
+
+.cart-grid {
+  display: grid;
+  margin-bottom: auto;
+}
+
+@media (width >= 1024px) {
+  .cart-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    column-gap: 48px;
+  }
+}
