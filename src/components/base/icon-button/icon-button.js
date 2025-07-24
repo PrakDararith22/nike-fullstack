@@ -37,15 +37,21 @@ class IconButton extends BaseComponent {
         this.isToggled = !this.isToggled;
         this.setToggleIcon();
       }
-      if (this.action) {
-        this.dispatchEvent(
-          new CustomEvent("icon-button", {
-            bubbles: true,
-            detail: { action: this.action },
-          })
-        );
-      }
+      this.emitAction();
     });
+  }
+
+  emitAction() {
+    if (this.disabled || !this.action) return;
+    this.dispatchEvent(
+      new CustomEvent("icon-button", {
+        bubbles: true,
+        composed: true,
+        detail: {
+          action: this.action,
+        },
+      })
+    );
   }
 
   static validateSize(value) {
@@ -126,11 +132,11 @@ class IconButton extends BaseComponent {
     }
 
     if (hasText) {
-      buttonContent += `<span class="button-text ${hasIcon ? "ml-2" : ""}">${this.text}</span>`;
+      buttonContent += `<span class="text-p2 font-semibold ${hasIcon ? "ml-2" : ""}">${this.text}</span>`;
     }
     if (!hasIcon && !hasText) {
       console.warn("IconButton: Neither icon nor text provided. Button may not be accessible.");
-      buttonContent = "<span class='button-text'>Button</span>";
+      buttonContent = "<p class='text-p2 font-semibold'>Button</p>";
     }
     const currentSize = this.size || 1;
 
@@ -191,20 +197,6 @@ class IconButton extends BaseComponent {
     this.disabled = false;
     this.removeAttribute("disabled");
     this.updateTemplate();
-  }
-
-  // Debug method to check current state
-  getDebugInfo() {
-    return {
-      icon: this.icon,
-      text: this.text,
-      size: this.size,
-      originalIcon: this.originalIcon,
-      toggleIcon: this.toggleIcon,
-      isToggled: this.isToggled,
-      disabled: this.disabled,
-      hasToggleIcon: this.hasToggleIcon,
-    };
   }
 }
 
