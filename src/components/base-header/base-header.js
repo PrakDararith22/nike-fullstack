@@ -22,6 +22,10 @@ class BaseHeader extends BaseComponent {
         const searchPanel = document.querySelector("search-panel");
         searchPanel.togglePanel();
       }
+      if (actions === "menu-panel") {
+        const menuPanel = document.querySelector("menu-panel");
+        menuPanel.togglePanel();
+      }
     });
     this.addEventListener("search-input", event => {
       const actions = event.detail.action;
@@ -70,7 +74,7 @@ class BaseHeader extends BaseComponent {
           <icon-button icon="${cartEmpty}"></icon-button>
           <icon-button icon="${search}" action="search-panel" class="hide-tablet hide-desktop"></icon-button>
           <icon-button icon="${heart}"></icon-button>
-          <icon-button icon="${menu}" class="hide-tablet hide-desktop"></icon-button>
+          <icon-button icon="${menu}" action="menu-panel" class="hide-tablet hide-desktop"></icon-button>
         </div>
       </div>
     </div>

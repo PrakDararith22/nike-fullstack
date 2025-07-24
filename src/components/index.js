@@ -10,3 +10,4 @@ import "./base-footer/base-footer";
 import "./base-accordion/base-accordion";
 import "./product-card/product-card";
 import "./search-panel/search-panel";
+import "./menu-panel/menu-panel";
