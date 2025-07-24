@@ -82,14 +82,3 @@
 .border-r {
   border-right: var(--border-width-thin) solid var(--gray-600);
 }
-
-/* ========== Box Shadows ========== */
-.shadow-low {
-  box-shadow: var(--shadow-low);
-} /* subtle shadow */
-.shadow-medium {
-  box-shadow: var(--shadow-medium);
-} /* medium shadow */
-.shadow-high {
-  box-shadow: var(--shadow-high);
-}

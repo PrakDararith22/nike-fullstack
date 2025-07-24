@@ -25,11 +25,11 @@
 
 /* Width */
 .w-full {
-  width: var(--size-full);
+  width: 100%;
 }
 
 .w-screen {
-  width: var(--size-screen-w);
+  width: 100vw;
 }
 
 .w-auto {
@@ -62,11 +62,11 @@
 
 /* Height */
 .h-full {
-  height: var(--size-full);
+  height: 100%;
 }
 
 .h-screen {
-  height: var(--size-screen-h);
+  height: 100vh;
 }
 
 .h-auto {

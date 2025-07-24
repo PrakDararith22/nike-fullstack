@@ -31,7 +31,8 @@ figure {
 }
 
 a {
-  text-decoration: none;
+  font-weight: 600;
+  text-decoration: underline;
   color: inherit;
   cursor: pointer;
 }
