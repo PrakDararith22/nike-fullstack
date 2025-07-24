@@ -16,6 +16,20 @@ class BaseHeader extends BaseComponent {
   connectedCallback() {
     super.connectedCallback();
     this.updateTemplate();
+    this.addEventListener("icon-button", event => {
+      const actions = event.detail.action;
+      if (actions === "search-panel") {
+        const searchPanel = document.querySelector("search-panel");
+        searchPanel.togglePanel();
+      }
+    });
+    this.addEventListener("search-input", event => {
+      const actions = event.detail.action;
+      if (actions === "searchClose") {
+        const searchPanel = document.querySelector("search-panel");
+        searchPanel.togglePanel();
+      }
+    });
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -52,14 +66,18 @@ class BaseHeader extends BaseComponent {
       <!-- icon section -->
       <div class="base-header-span justify-self-end">
         <div class="flex">
-        <search-input text="search" class="hide-mobile"></search-input>
+          <search-input text="search"  class="hide-mobile" action="searchClose"></search-input>
           <icon-button icon="${cartEmpty}"></icon-button>
-          <icon-button icon="${search}" class="hide-tablet hide-desktop"></icon-button>
+          <icon-button icon="${search}" action="search-panel" class="hide-tablet hide-desktop"></icon-button>
           <icon-button icon="${heart}"></icon-button>
           <icon-button icon="${menu}" class="hide-tablet hide-desktop"></icon-button>
         </div>
       </div>
     </div>
+
+    <!-- panel -->
+    <search-panel></search-panel>
+    <menu-panel></menu-panel>
 
     `;
     this.render();
