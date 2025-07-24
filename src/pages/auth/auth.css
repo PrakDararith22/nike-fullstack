@@ -1,0 +1,9 @@
+.auth-page-container {
+  width: 460px;
+}
+
+.auth-page-container a {
+  text-decoration: underline;
+  color: var(--gray-850);
+  font-weight: 450;
+}
