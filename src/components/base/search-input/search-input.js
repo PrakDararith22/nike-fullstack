@@ -2,7 +2,7 @@ import { search } from "@assets";
 
 class searchInput extends BaseComponent {
   static get observedAttributes() {
-    return ["text", "disabled", "action"];
+    return ["text", "disabled", "action", "type", "icon"];
   }
 
   constructor() {
@@ -10,6 +10,8 @@ class searchInput extends BaseComponent {
     this.text = "";
     this.disabled = false;
     this.action = "";
+    this.type = "";
+    this.icon = "";
   }
 
   connectedCallback() {
@@ -51,6 +53,12 @@ class searchInput extends BaseComponent {
         case "disabled":
           this.disabled = newValue !== null;
           break;
+        case "type":
+          this.type = newValue || "";
+          break;
+        case "icon":
+          this.type = newValue || "";
+          break;
         default:
           console.warn(`Unhandled observed attribute: ${name}`);
           break;
@@ -60,11 +68,17 @@ class searchInput extends BaseComponent {
   }
 
   updateTemplate() {
+    const typeMap = {
+      search: "rounded-lg bg-gray-200",
+      input: "py-4 border rounded-sm bg-transparent",
+    };
+    console.log(this.type);
     this.template = `
-    <div class="search-input bg-gray-200 flex items-center px-3 rounded-lg w-full">
-      <icon-button icon="${search}" "></icon-button>
+    <div class="search-input  flex items-center px-1  w-full flex items-center
+    ${typeMap[this.type] || ""}">
+      <icon-button icon="${this.icon}" size="0.9"></icon-button>
       <input type="text" placeholder="${this.text} ${this.disabled ? "disabled" : ""}" 
-      class="outline-none border-none body-sm w-full bg-transparent text-p1 font-semibold text-gray-500"/>
+      class="outline-none border-none body-sm w-full bg-transparent text-p2 font-semibold text-gray-500"/>
     </div>
     `;
 

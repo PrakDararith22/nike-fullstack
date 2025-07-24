@@ -136,7 +136,7 @@ class IconButton extends BaseComponent {
     }
     if (!hasIcon && !hasText) {
       console.warn("IconButton: Neither icon nor text provided. Button may not be accessible.");
-      buttonContent = "<p class='text-p2 font-semibold'>Button</p>";
+      buttonContent = "<p class='text-p2 font-semibold'></p>";
     }
     const currentSize = this.size || 1;
 
