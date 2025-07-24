@@ -1,5 +1,12 @@
 import { Router } from "./utils/router,";
-import { homePage, productDetail, productList, authPage, cartPage } from "./pages/index";
+import {
+  homePage,
+  productDetail,
+  productList,
+  authPage,
+  cartPage,
+  favoritePage,
+} from "./pages/index";
 
 const router = new Router("app");
 
@@ -11,6 +18,7 @@ router.route("/signin", authPage("signin"));
 router.route("/password", authPage("password"));
 router.route("/reset", authPage("reset"));
 router.route("/cart", cartPage());
+router.route("/favorite", favoritePage());
 window.addEventListener("DOMContentLoaded", () => {
   router.init();
 });
