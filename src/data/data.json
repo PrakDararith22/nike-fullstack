@@ -1,72 +1,1004 @@
 {
-  "products": [
+  "datas": [
     {
-      "id": "DQ8426-100",
-      "name": "Air Jordan 1 Low",
+      "id": "1",
+      "name": "Air Jordan 1 Mid 'Iron Grey'",
+      "brand": "Jordan",
+      "category": "Gym",
+      "subcategory": "Shoes",
+      "gender": "Men",
+      "price": {
+        "currency": "QAR",
+        "amount": 350,
+        "discount": {
+          "isActive": true,
+          "type": "percentage",
+          "value": 52
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colours and crisp leather give it a distinct identity.",
+      "features": ["Colour Shown: Black/White/Iron Grey", "Style: DQ8426-001"],
+      "images": "/src/data/men/air-jordan-1mid.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": true,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "2",
+      "name": "Air Jordan 1 Low 'Tokyo Bio Hack'",
       "brand": "Jordan",
       "category": "Basketball",
       "subcategory": "Shoes",
       "gender": "Men",
       "price": {
-        "currency": "USD",
-        "amount": 90.0,
-        "originalPrice": 90.0,
-        "salePrice": null,
-        "onSale": false
+        "currency": "QAR",
+        "amount": 699,
+        "discount": {
+          "isActive": true,
+          "type": null,
+          "value": 0
+        }
       },
-      "colors": [
-        {
-          "name": "White/Black/White",
-          "hex": "#FFFFFF",
-          "images": [
-            "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/air-jordan-1-low-shoes-6Q1tFM.png"
-          ]
-        }
-      ],
-      "sizes": [
-        {
-          "us": "8",
-          "uk": "7",
-          "eu": "41",
-          "cm": "26",
-          "inStock": true,
-          "quantity": 15
-        },
-        {
-          "us": "9",
-          "uk": "8",
-          "eu": "42.5",
-          "cm": "27",
-          "inStock": true,
-          "quantity": 8
-        },
-        {
-          "us": "10",
-          "uk": "9",
-          "eu": "44",
-          "cm": "28",
-          "inStock": false,
-          "quantity": 0
-        }
-      ],
-      "description": "Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's familiar yet always fresh.",
-      "features": [
-        "Leather and synthetic upper",
-        "Air-Sole unit in heel",
-        "Solid rubber outsole",
-        "Color Shown: White/Black/White"
-      ],
-      "materials": ["Upper: Leather/Synthetic", "Sole: Rubber"],
-      "images": [
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/main-image.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/side-view.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/back-view.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/sole-view.png"
-      ],
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "Your forever fave gets an update inspired by vintage Jordan graphics. The features you know and love are all there: cupsole construction, Nike Air underfoot and premium leather and textiles in the upper. But fresh details, like the jewelled Wings logo, make this edition pop.",
+      "features": ["Colour Shown: Oil Grey/Cave Stone/Arctic Punch/White", "Style: HQ2010-005"],
+      "images": "/src/data/men/air-jordan-low-tokyo-bio-hack.png",
       "availability": {
         "inStock": true,
-        "totalQuantity": 23,
-        "releaseDate": "2021-04-15T00:00:00Z",
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "3",
+      "name": "Paris Saint-Germain Air Max Plus Premium",
+      "brand": "Jordan",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Men",
+      "price": {
+        "currency": "QAR",
+        "amount": 999,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "Let your attitude have the edge in this PSG edition of the Air Max Plus. Airy mesh helps keep you cool, while the visible cushioning lets you celebrate your team in comfort.",
+      "features": ["Colour Shown: Black/Particle Grey/Anthracite/Black", "Style: IB2253-001"],
+      "images": "/src/data/men/paris-saint-germain.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": true,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "4",
+      "name": "Nike Air Force 1 '07",
+      "brand": "Jordan",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Men",
+      "price": {
+        "currency": "QAR",
+        "amount": 579,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "Comfortable, durable and timeless—it's number one for a reason. The classic '80s construction pairs smooth leather with bold details for style that tracks whether you're on court or on the go.",
+      "features": ["Colour Shown: White/White", "Style: CW2288-111"],
+      "images": "/src/data/men/nike-air-force-1.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": true,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "5",
+      "name": "Air Jordan 4 Retro 'White Cement'",
+      "brand": "Jordan",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Men",
+      "price": {
+        "currency": "QAR",
+        "amount": 699,
+        "discount": {
+          "isActive": true,
+          "type": "percentage",
+          "value": 30
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "Comfortable, durable and timeless—it's number one for a reason. The classic '80s construction pairs smooth leather with bold details for style that tracks whether you're on court or on the go.",
+      "features": ["Colour Shown: White/White", "Style: CW2288-111"],
+      "images": "/src/data/men/air-jordan-4-retro.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "6",
+      "name": "Nike Free Metcon 6",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Men",
+      "price": {
+        "currency": "QAR",
+        "amount": 629,
+        "discount": {
+          "isActive": true,
+          "type": "percentage",
+          "value": 30
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "From power lifts to ladders, from grass blades to grainy platforms, from the turf to the track, your workout has a certain purpose, a specific focus. The Free Metcon 6 supports every grunt, growl and 'got it!' We added even more forefoot flexibility to our most adaptable trainer and reinforced the heel with extra foam. That means more freedom for dynamic movements during plyos and cardio classes, plus the stable base you need for weights.",
+      "features": ["Colour Shown: Blue Tint/Comet Blue/Midnight Navy/White", "Style: FJ7127-403"],
+      "images": "/src/data/men/nike-free-metcon.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "7",
+      "name": "Nike Zoom Fly 6",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Men",
+      "price": {
+        "currency": "QAR",
+        "amount": 849,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "The Zoom Fly 6 is with you every step of your run. Lighter than the Zoom Fly 5, its responsive ZoomX foam adds energy return to each stride, while a carbon-fibre Flyplate helps propel you to the finishing line.",
+      "features": ["Colour Shown: White/Smoke Grey/Metallic Silver/Black", "Style: FN8454-100"],
+      "images": "/src/data/men/nike-zoom-fly.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "8",
+      "name": "Nike Mercurial Vapor 16 Elite",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Men",
+      "price": {
+        "currency": "QAR",
+        "amount": 1399,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "Obsessed with speed? So are the game's biggest stars. That's why we made this Elite boot with an improved /src/data/4-length Air Zoom unit. It gives you and the sport's fastest players the propulsive feel needed to break through the back line. The result is the most responsive Mercurial we've ever made because you demand greatness from yourself and your footwear.",
+      "features": ["Colour Shown: University Red/Dark Obsidian", "Style: HJ7325-600"],
+      "images": "/src/data/men/nike-mercurial-vapor.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "9",
+      "name": "Nike Mercurial Vapor 16 Elite 'Kylian Mbappé'",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Men",
+      "price": {
+        "currency": "QAR",
+        "amount": 979,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "For all of Kylian's scoring barrages, step-overs and shrugs, Mercurial has been there to unlock his blazing speed. With graphic shout-outs to his most iconic player editions since 2018, this Vapor 16 Elite uses our bouncy Air Zoom cushioning, a new traction plate and revolutionary Gripknit to help boost his game-changing acceleration.",
+      "features": ["Colour Shown: Grand Purple/Pale Ivory", "Style: FQ8683-500"],
+      "images": "/src/data/men/nike-mercurial-vapor-16.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "10",
+      "name": "Nike Air Pegasus 2005 SE",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Men",
+      "price": {
+        "currency": "QAR",
+        "amount": 499,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "The Peg's familiar, just-for-you feel returns with a design ready for the streets. This edition has the same cushioning and comfort you love with a breezy look inspired by early-2000s runners.",
+      "features": [
+        "Colour Shown: Platinum Tint/Pure Platinum/Metallic Platinum",
+        "Style: IB2983-001"
+      ],
+      "images": "/src/data/men/nike-air-pegasus.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "11",
+      "name": "Air Jordan 3 'Starfish'",
+      "brand": "Jordan",
+      "category": "lifestyle",
+      "subcategory": "Shoes",
+      "gender": "Women",
+      "price": {
+        "currency": "QAR",
+        "amount": 499,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "Gold standard? Sure, you could call it that. The AJ3 is an all-time fave and this retro iteration only adds to that legacy. Canvas and suede give the upper a fresh look and feel.",
+      "features": ["Colour Shown: Fossil/Sail/Starfish", "Style: IH7694-200"],
+      "images": "/src/data/Women/air-jordan-3.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "12",
+      "name": "Air Jordan 1 Mid 'Light Madder Root' ",
+      "brand": "Jordan",
+      "category": "lifestyle",
+      "subcategory": "Shoes",
+      "gender": "Women",
+      "price": {
+        "currency": "QAR",
+        "amount": 699,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "The Air Jordan 1 Mid brings full-court style and premium comfort to an iconic look. Its Air-Sole unit cushions play on the hardwood, while the padded collar gives you a supportive feel.",
+      "features": ["Colour Shown: Sail/Madder Root/Muslin/Light Madder Root", "Style: BQ6472-180"],
+      "images": "/src/data/Women/light-madder-root.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "13",
+      "name": "Nike Vomero 18",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Women",
+      "price": {
+        "currency": "QAR",
+        "amount": 749,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "Maximum cushioning in the Vomero provides a comfortable ride for everyday runs. Our softest, most cushioned ride has lightweight ZoomX foam stacked on top of responsive ReactX foam in the midsole. And a redesigned traction pattern offers a smooth heel-to-toe transition.",
+      "features": ["Colour Shown: Barely Grey/Pale Ivory/Cannon/Playful Pink", "Style: IH3634-099"],
+      "images": "/src/data/Women/nike-vomero.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "14",
+      "name": "Nike Structure 26",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Women",
+      "price": {
+        "currency": "QAR",
+        "amount": 679,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "The supportive cushioning in the Structure 26 provides steadiness for everyday runs. A full-length ReactX midsole delivers a cushioned yet stable transition from heel to toe-off. Plus, a tried-and-tested midfoot support system wraps around your arch and heel to provide a firm platform.",
+      "features": ["Colour Shown: White/Barely Green/Mint Foam/Black", "Style: HJ1101-100"],
+      "images": "/src/data/Women/nike-structure.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "15",
+      "name": "Nike Free Metcon 6",
+      "brand": "nike",
+      "category": "gym",
+      "subcategory": "Shoes",
+      "gender": "Women",
+      "price": {
+        "currency": "QAR",
+        "amount": 629,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "The Free Metcon 6 opens your world of workout possibilities. We added even more forefoot flexibility to our most adaptable trainer and reinforced the heel with extra foam. That means more freedom for dynamic movements during plyos and cardio classes, plus the stable base you need for weights.",
+      "features": ["Colour Shown: Soft Pearl/Pearl White/Sail/Particle Pink", "Style: FJ7126-011"],
+      "images": "/src/data/Women/nike-free-metcon6.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "16",
+      "name": "Nike Free Metcon 6",
+      "brand": "nike",
+      "category": "Gym",
+      "subcategory": "Shoes",
+      "gender": "Women",
+      "price": {
+        "currency": "QAR",
+        "amount": 629,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "The Free Metcon 6 opens your world of workout possibilities. We added even more forefoot flexibility to our most adaptable trainer and reinforced the heel with extra foam. That means more freedom for dynamic movements during plyos and cardio classes, plus the stable base you need for weights.",
+      "features": ["Colour Shown: Black/White", "Style: FJ7126-001"],
+      "images": "/src/data/Women/nike-free-metcon5.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "17",
+      "name": "Sabrina 2 'Apricot Agate'",
+      "brand": "nike",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Women",
+      "price": {
+        "currency": "QAR",
+        "amount": 479,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "Sabrina Ionescu's success is no secret. Her game is based on living in the gym, getting in rep after rep to perfect her craft. The Sabrina 2 sets you up to do more, so you're ready to go when it's game time. Our newest Cushlon foam helps keep you fresh, Air Zoom cushioning adds the pop and sticky traction helps you create that next-level distance. Sabrina's handed you the tools. Time to go to work.",
+      "features": [
+        "Colour Shown: Apricot Agate/Washed Coral/Washed Teal/Light Bone",
+        "Style: FQ2174-801"
+      ],
+      "images": "/src/data/Women/sabrina.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "18",
+      "name": "KD17",
+      "brand": "Jordan",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Women",
+      "price": {
+        "currency": "QAR",
+        "amount": 400,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "While Kevin Durant's all-timer status is already cemented, his hooper soul can't be soothed unless he's on the court, perfecting his craft. Put in the work to be great in the KD17, a shoe for gym rats and those who insist on running it back. A forefoot Air Zoom unit enhances your first step. We combined it with Nike Air cushioning to fuel full-court sprints and defensive stops that can decide games.",
+      "features": [
+        "Colour Shown: Barely Volt/Hyper Pink/Total Orange/Baltic Blue",
+        "Style: HF1811-700"
+      ],
+      "images": "/src/data/men/nike-air-pegasus.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "19",
+      "name": "Jordan Heir Series",
+      "brand": "nike",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Women",
+      "price": {
+        "currency": "QAR",
+        "amount": 299,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "Denim and gold. We're celebrating two iconic wardrobe staples with this Jordan Heir Series colourway. Of course, great style has got to be paired with court-ready tech. A drop-in midsole gives you extra mobility and an external cage adds stability. Talk about perfect pairings.",
+      "features": ["Colour Shown: Sail/Electric Green/White/Wolf Grey", "Style: FZ2471-103"],
+      "images": "/src/data/Women/jordan-heir.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "20",
+      "name": "Jordan Heir Series 'Abundance'",
+      "brand": "Jordan",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Women",
+      "price": {
+        "currency": "QAR",
+        "amount": 399,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "40.5": 20,
+        "41": 15,
+        "42": 5,
+        "42.5": 5,
+        "43": 5,
+        "44": 0
+      },
+      "description": "Turn your hustle on. Watch it pay off. Packed with tech to help you focus on growing your low game, this Jordan Heir Series is an homage to those who aren't afraid to go after what they want. Taking style cues from the AJ4 'Pure Money', it puts a fresh spin on an iconic retro to celebrate the attitude and grind you bring to every move you make.",
+      "features": ["Colour Shown: White/Barely Green/Seafoam/Oil Green", "Style: IB7140-102"],
+      "images": "/src/data/Women/jordan-heir-series.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "21",
+      "name": "Air Jordan 1 Mid 'Iron Grey'",
+      "brand": "Jordan",
+      "category": "Gym",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 350,
+        "discount": {
+          "isActive": true,
+          "type": "percentage",
+          "value": 52
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colours and crisp leather give it a distinct identity. Perfect for young athletes.",
+      "features": ["Colour Shown: Black/White/Iron Grey", "Style: DQ8426-001"],
+      "images": "/src/data/men/air-jordan-1mid.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
         "isNewRelease": false,
         "isComingSoon": false,
         "isBestseller": true
@@ -82,9 +1014,815 @@
           "1": 23
         }
       },
-      "tags": ["basketball", "retro", "street-style", "classic"],
-      "createdAt": "2021-04-15T10:30:00Z",
-      "updatedAt": "2024-01-15T14:22:00Z"
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "22",
+      "name": "Air Jordan 1 Low 'Tokyo Bio Hack'",
+      "brand": "Jordan",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 699,
+        "discount": {
+          "isActive": true,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "Your forever fave gets an update inspired by vintage Jordan graphics. The features you know and love are all there: cupsole construction, Nike Air underfoot and premium leather and textiles in the upper. But fresh details, like the jewelled Wings logo, make this edition pop.",
+      "features": ["Colour Shown: Oil Grey/Cave Stone/Arctic Punch/White", "Style: HQ2010-005"],
+      "images": "/src/data/men/air-jordan-1mid.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "23",
+      "name": "Paris Saint-Germain Air Max Plus Premium",
+      "brand": "Jordan",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 999,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "Let your attitude have the edge in this PSG edition of the Air Max Plus. Airy mesh helps keep you cool, while the visible cushioning lets you celebrate your team in comfort.",
+      "features": ["Colour Shown: Black/Particle Grey/Anthracite/Black", "Style: IB2253-001"],
+      "images": "/src/data/men/paris-saint-germain.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "24",
+      "name": "Nike Air Force 1 '07",
+      "brand": "Jordan",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 579,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "Comfortable, durable and timeless—it's number one for a reason. The classic '80s construction pairs smooth leather with bold details for style that tracks whether you're on court or on the go.",
+      "features": ["Colour Shown: White/White", "Style: CW2288-111"],
+      "images": "/src/data/men/nike-air-force-1.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "25",
+      "name": "Air Jordan 4 Retro 'White Cement'",
+      "brand": "Jordan",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 699,
+        "discount": {
+          "isActive": true,
+          "type": "percentage",
+          "value": 30
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "Comfortable, durable and timeless—it's number one for a reason. The classic '80s construction pairs smooth leather with bold details for style that tracks whether you're on court or on the go.",
+      "features": ["Colour Shown: White/White", "Style: CW2288-111"],
+      "images": "/src/data/men/air-jordan-4-retro.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "26",
+      "name": "Nike Free Metcon 6",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 629,
+        "discount": {
+          "isActive": true,
+          "type": "percentage",
+          "value": 30
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "From power lifts to ladders, from grass blades to grainy platforms, from the turf to the track, your workout has a certain purpose, a specific focus. The Free Metcon 6 supports every grunt, growl and 'got it!' We added even more forefoot flexibility to our most adaptable trainer and reinforced the heel with extra foam.",
+      "features": ["Colour Shown: Blue Tint/Comet Blue/Midnight Navy/White", "Style: FJ7127-403"],
+      "images": "/src/data/men/nike-free-metcon.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "27",
+      "name": "Nike Zoom Fly 6",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 849,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "The Zoom Fly 6 is with you every step of your run. Lighter than the Zoom Fly 5, its responsive ZoomX foam adds energy return to each stride, while a carbon-fibre Flyplate helps propel you to the finishing line.",
+      "features": ["Colour Shown: White/Smoke Grey/Metallic Silver/Black", "Style: FN8454-100"],
+      "images": "/src/data/men/nike-zoom-fly.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "28",
+      "name": "Nike Mercurial Vapor 16 Elite",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 1399,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "Obsessed with speed? So are the game's biggest stars. That's why we made this Elite boot with an improved /src/data/4-length Air Zoom unit. It gives you and the sport's fastest players the propulsive feel needed to break through the back line.",
+      "features": ["Colour Shown: University Red/Dark Obsidian", "Style: HJ7325-600"],
+      "images": "/src/data/men/nike-mercurial-vapor.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "29",
+      "name": "Nike Mercurial Vapor 16 Elite 'Kylian Mbappé'",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 979,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "For all of Kylian's scoring barrages, step-overs and shrugs, Mercurial has been there to unlock his blazing speed. With graphic shout-outs to his most iconic player editions since 2018, this Vapor 16 Elite uses our bouncy Air Zoom cushioning.",
+      "features": ["Colour Shown: Grand Purple/Pale Ivory", "Style: FQ8683-500"],
+      "images": "/src/data/men/nike-mercurial-vapor-16.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "30",
+      "name": "Nike Air Pegasus 2005 SE",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 499,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "The Peg's familiar, just-for-you feel returns with a design ready for the streets. This edition has the same cushioning and comfort you love with a breezy look inspired by early-2000s runners.",
+      "features": [
+        "Colour Shown: Platinum Tint/Pure Platinum/Metallic Platinum",
+        "Style: IB2983-001"
+      ],
+      "images": "/src/data/men/nike-air-pegasus.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "31",
+      "name": "Air Jordan 3 'Starfish'",
+      "brand": "Jordan",
+      "category": "lifestyle",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 499,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "Gold standard? Sure, you could call it that. The AJ3 is an all-time fave and this retro iteration only adds to that legacy. Canvas and suede give the upper a fresh look and feel.",
+      "features": ["Colour Shown: Fossil/Sail/Starfish", "Style: IH7694-200"],
+      "images": "/src/data/Women/air-jordan-3.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "32",
+      "name": "Air Jordan 1 Mid 'Light Madder Root'",
+      "brand": "Jordan",
+      "category": "lifestyle",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 699,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "The Air Jordan 1 Mid brings full-court style and premium comfort to an iconic look. Its Air-Sole unit cushions play on the hardwood, while the padded collar gives you a supportive feel.",
+      "features": ["Colour Shown: Sail/Madder Root/Muslin/Light Madder Root", "Style: BQ6472-180"],
+      "images": "/src/data/Women/light-madder-root.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "33",
+      "name": "Nike Vomero 18",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 749,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "Maximum cushioning in the Vomero provides a comfortable ride for everyday runs. Our softest, most cushioned ride has lightweight ZoomX foam stacked on top of responsive ReactX foam in the midsole.",
+      "features": ["Colour Shown: Barely Grey/Pale Ivory/Cannon/Playful Pink", "Style: IH3634-099"],
+      "images": "/src/data/Women/nike-vomero.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "34",
+      "name": "Nike Structure 26",
+      "brand": "Jordan",
+      "category": "running",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 679,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "The supportive cushioning in the Structure 26 provides steadiness for everyday runs. A full-length ReactX midsole delivers a cushioned yet stable transition from heel to toe-off.",
+      "features": ["Colour Shown: White/Barely Green/Mint Foam/Black", "Style: HJ1101-100"],
+      "images": "/src/data/Women/nike-structure.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "35",
+      "name": "Nike Free Metcon 6",
+      "brand": "nike",
+      "category": "gym",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 629,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "The Free Metcon 6 opens your world of workout possibilities. We added even more forefoot flexibility to our most adaptable trainer and reinforced the heel with extra foam.",
+      "features": ["Colour Shown: Soft Pearl/Pearl White/Sail/Particle Pink", "Style: FJ7126-011"],
+      "images": "/src/data/Women/nike-free-metcon6.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "36",
+      "name": "Nike Free Metcon 6",
+      "brand": "nike",
+      "category": "Gym",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 629,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "The Free Metcon 6 opens your world of workout possibilities. We added even more forefoot flexibility to our most adaptable trainer and reinforced the heel with extra foam.",
+      "features": ["Colour Shown: Black/White", "Style: FJ7126-001"],
+      "images": "/src/data/Women/nike-free-metcon5.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "37",
+      "name": "Sabrina 2 'Apricot Agate'",
+      "brand": "nike",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 479,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "Sabrina Ionescu's success is no secret. Her game is based on living in the gym, getting in rep after rep to perfect her craft. The Sabrina 2 sets you up to do more, so you're ready to go when it's game time.",
+      "features": [
+        "Colour Shown: Apricot Agate/Washed Coral/Washed Teal/Light Bone",
+        "Style: FQ2174-801"
+      ],
+      "images": "/src/data/Women/sabrina.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
+    },
+    {
+      "id": "38",
+      "name": "KD17",
+      "brand": "Jordan",
+      "category": "Basketball",
+      "subcategory": "Shoes",
+      "gender": "Kids",
+      "price": {
+        "currency": "QAR",
+        "amount": 400,
+        "discount": {
+          "isActive": false,
+          "type": null,
+          "value": 0
+        }
+      },
+      "sizes": {
+        "28": 20,
+        "29": 15,
+        "30": 5,
+        "31": 5,
+        "32": 5,
+        "33": 0
+      },
+      "description": "While Kevin Durant's all-timer status is already cemented, his hooper soul can't be soothed unless he's on the court, perfecting his craft. Put in the work to be great in the KD17, a shoe for gym rats and those who insist on running it back.",
+      "features": [
+        "Colour Shown: Barely Volt/Hyper Pink/Total Orange/Baltic Blue",
+        "Style: HF1811-700"
+      ],
+      "images": "/src/data/men/nike-air-pegasus.png",
+      "availability": {
+        "inStock": true,
+        "totalQuantity": 50,
+        "isNewRelease": false,
+        "isComingSoon": false,
+        "isBestseller": true
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 1247,
+        "distribution": {
+          "5": 750,
+          "4": 312,
+          "3": 128,
+          "2": 34,
+          "1": 23
+        }
+      },
+      "tags": ["basketball", "retro", "street-style", "classic"]
     }
   ]
 }
