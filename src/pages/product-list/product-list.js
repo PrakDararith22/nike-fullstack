@@ -3,17 +3,18 @@ import "./product-list.css";
 import { sliders, chevron } from "@assets";
 import image from "../../assets/shoe.png";
 
-export function productList() {
+export function productList(data, category) {
+  const formattedCategory = category.replace(/-/g, " ");
   return /* html */ `
     <base-header></base-header>
     <top-message-bar></top-message-bar>
 
     <div class="product-list">
-        <h2 class="font-medium pl-4 pb-7 border-b">EC25</h2>
+        <h2 class="font-medium pl-4 pb-7 border-b">${category}</h2>
         <div>
 
 			<div class="flex items-center justify-between py-4">
-				<p class="text-gray-800 font-semibold">10 Results</p>
+				<p class="text-gray-800 font-semibold">${data.length} Results</p>
 				<base-button text="filter" icon="${sliders}" variant="secondary"></base-button>
 			</div>
         
@@ -30,111 +31,25 @@ export function productList() {
 				<!-- product grid-->
 				<div class="">
 					<div class="product-list-grid flex">
+						${data
+              .map(product => {
+                const price = product.price?.amount
+                  ? `${product.price.currency} ${product.price.amount.toFixed(2)}`
+                  : "Price Unavailable";
+                return `
+					<a href="/${formattedCategory.replace(/&/g, "and").replace(/\s+/g, "-")}/${product.id}">
 						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
+							title="${product.name}"
+							category="${product.category}"
+							price="${price}"
+							image="${product.images}"
 						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
-						<product-card
-						status="Bestseller"
-						title="Air Jordan 1 High OG 'Shattered Backboard'"
-						category="Men's Shoes"
-						price="QAR 629.00"
-						image="${image}"
-						></product-card>
+					</a>
+				`;
+              })
+              .join("")}
+						
+						
 					</div>
 				</div>
 			</div>
