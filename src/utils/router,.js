@@ -10,9 +10,39 @@ export class Router {
     this.routes.set(path, typeof view === "function" ? view : () => view);
   }
 
+  static matchRoute(path, routePattern) {
+    const pathParts = path.split("/").filter(Boolean);
+    const patternParts = routePattern.split("/").filter(Boolean);
+
+    if (pathParts.length !== patternParts.length) return null;
+
+    const params = {};
+
+    const matched = pathParts.every((part, i) => {
+      const patternPart = patternParts[i];
+      if (patternPart.startsWith(":")) {
+        const paramName = patternPart.slice(1);
+        params[paramName] = part;
+        return true;
+      }
+      return patternPart === part;
+    });
+
+    return matched ? params : null;
+  }
+
   render(path) {
-    const view = this.routes.get(path) || (() => "<h1>404</h1><p>Page not found</p>");
-    this.appRoot.innerHTML = view();
+    const matched = Array.from(this.routes.entries()).some(([routePattern, view]) => {
+      const params = Router.matchRoute(path, routePattern);
+      if (params !== null) {
+        this.appRoot.innerHTML = view(params);
+        return true;
+      }
+      return false;
+    });
+    if (!matched) {
+      this.appRoot.innerHTML = "<h1>404</h1><p>Page not found</p>";
+    }
   }
 
   navigate(path) {
