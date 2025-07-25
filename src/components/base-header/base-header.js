@@ -10,7 +10,7 @@ class BaseHeader extends BaseComponent {
   constructor() {
     super();
     this.test = "";
-    this.menu = ["New & Featured", "Men", "Women", "Kids", "Jordan", " Sale"];
+    this.menu = ["New & Featured", "Men", "Women", "Kids", "Jordan", "Sale"];
   }
 
   connectedCallback() {
@@ -57,13 +57,21 @@ class BaseHeader extends BaseComponent {
     <div class="base-header items-center">
       <!-- logo section -->
       <div class="base-header-span justify-self-start">
-        <icon-button icon="${nike}" size="2"></icon-button>
+        <icon-button icon="${nike}" size="2" to="/home"></icon-button>
       </div>
 
       <!-- menu section -->
       <div class="base-header-span justify-self-center">
-        <div class="flex gap-2 hide-mobile">
-          ${this.menu.map(item => `<a>${item}</a>`).join("")}
+        <div class="flex gap-6 hide-mobile text-h5">
+          ${this.menu
+            .map(item => {
+              const path = item
+                .toLowerCase()
+                .replace(/&/g, "and") // Replace "&" with "and"
+                .replace(/\s+/g, "-"); // Replace spaces with "-"
+              return `<a href="/${path}">${item}</a>`;
+            })
+            .join("")}
         </div>
       </div>
 
@@ -71,9 +79,9 @@ class BaseHeader extends BaseComponent {
       <div class="base-header-span justify-self-end">
         <div class="flex">
           <search-input text="search"  class="hide-mobile" action="searchClose"></search-input>
-          <icon-button icon="${cartEmpty}"></icon-button>
+          <icon-button icon="${cartEmpty}" to="/cart"></icon-button>
           <icon-button icon="${search}" action="search-panel" class="hide-tablet hide-desktop"></icon-button>
-          <icon-button icon="${heart}"></icon-button>
+          <icon-button icon="${heart}" to="/favorite"></icon-button>
           <icon-button icon="${menu}" action="menu-panel" class="hide-tablet hide-desktop"></icon-button>
         </div>
       </div>
