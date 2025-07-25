@@ -2,7 +2,7 @@ import { heart } from "@assets";
 
 class BaseButton extends BaseComponent {
   static get observedAttributes() {
-    return ["text", "variant", "icon", "type", "size"];
+    return ["text", "variant", "icon", "type", "size", "to"];
   }
 
   constructor() {
@@ -12,11 +12,17 @@ class BaseButton extends BaseComponent {
     this.icon = "";
     this.type = "action";
     this.size = "";
+    this.to = "";
   }
 
   connectedCallback() {
     super.connectedCallback();
     this.updateTemplate();
+    this.addEventListener("click", () => {
+      if (this.to) {
+        window.location.href = this.to;
+      }
+    });
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -40,6 +46,10 @@ class BaseButton extends BaseComponent {
         }
         case "size": {
           this.size = newValue || "";
+          break;
+        }
+        case "to": {
+          this.to = newValue || "";
           break;
         }
         default: {
@@ -72,9 +82,9 @@ class BaseButton extends BaseComponent {
 
     this.template = `
     <button class="flex items-center border justify-center gap-2 outline-none  w-full px-5 text-p1 font-medium 
-  ${sizeMap[this.size] || sizeMap.default} 
-  ${typeMap[this.type]} 
-  ${variantMap[this.variant]}">
+      ${sizeMap[this.size] || sizeMap.default} 
+      ${typeMap[this.type]} 
+      ${variantMap[this.variant]}">
       ${this.text}
       <img src="${this.icon}" class="object-contain" style="width: 18px; height: auto;" />
 

@@ -47,7 +47,7 @@ class BaseFooter extends BaseComponent {
 
         <div class="base-footer-1span base-footer-border  flex flex-col gap-2 py-3 text-white">
           <a class="font-semibold text-p2">FIND A STORE</a>
-          <a class="font-semibold text-p2">SIGN UP FOR EMAIL</a>
+          <a href="/signin" class="font-semibold text-p2">SIGN UP FOR EMAIL</a>
         </div>
 
         <div>

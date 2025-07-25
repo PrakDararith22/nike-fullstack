@@ -2,7 +2,7 @@ import "./icon-button.css";
 
 class IconButton extends BaseComponent {
   static get observedAttributes() {
-    return ["icon", "size", "toggle-icon", "disabled", "text", "href", "action"];
+    return ["icon", "size", "toggle-icon", "disabled", "text", "to", "action"];
   }
 
   constructor() {
@@ -15,7 +15,7 @@ class IconButton extends BaseComponent {
     this.hasToggleIcon = false;
     this.isToggled = false;
     this.disabled = false;
-    this.href = "";
+    this.to = "";
     this.action = "";
   }
 
@@ -29,7 +29,7 @@ class IconButton extends BaseComponent {
         return;
       }
 
-      if (this.href) {
+      if (this.to) {
         return;
       }
 
@@ -99,8 +99,8 @@ class IconButton extends BaseComponent {
           this.text = newValue || "";
           break;
         }
-        case "href": {
-          this.href = newValue || "";
+        case "to": {
+          this.to = newValue || "";
           break;
         }
         case "action": {
@@ -119,7 +119,7 @@ class IconButton extends BaseComponent {
   updateTemplate() {
     const hasIcon = Boolean(this.icon);
     const hasText = Boolean(this.text);
-    const isLink = Boolean(this.href);
+    const isLink = Boolean(this.to);
 
     // Generate appropriate alt text for accessibility
     const altText = hasText ? this.text : "Button";
@@ -143,7 +143,7 @@ class IconButton extends BaseComponent {
     this.template = `
     ${
       isLink
-        ? `<a href="${this.href}" class="icon-button border-none bg-transparent flex items-center justify-center hover-bg-primary rounded-sm p-1"
+        ? `<a href="${this.to}" class="icon-button border-none bg-transparent flex items-center  hover-bg-primary rounded-sm p-1"
             style="--icon-scale: ${currentSize}; transform: scale(var(--icon-scale));"
             ${this.disabled ? "aria-disabled='true' tabindex='-1'" : ""}>
             ${buttonContent}

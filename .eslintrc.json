@@ -5,8 +5,15 @@
     "es2021": true,
     "node": true
   },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
   "plugins": ["html", "prettier"],
   "globals": {
+    "__app_id": "readonly",
+    "__firebase_config": "readonly",
+    "__initial_auth_token": "readonly",
     "BaseComponent": "readonly"
   },
   "settings": {
