@@ -6,11 +6,26 @@ import shoe from "../../assets/shoe.png";
 
 export function productDetail(data) {
   const cart = new StorageList("cart");
+  let selectedSize = null;
 
   document.addEventListener("base-button", event => {
     const action = event.detail?.action;
+    if (action === "select-size") {
+      document.querySelectorAll(".product-detail-size base-button").forEach(btn => {
+        btn.classList.remove("border", "border-black", "rounded");
+      });
+      event.target.classList.add("border", "border-black", "rounded");
+      document.querySelector(".text-error").classList.add("hidden");
+      document.querySelector(".product-detail-size").classList.remove("border", "border-warning");
+      selectedSize = event.target.getAttribute("text") || event.target.dataset.size;
+    }
     if (action === "add-cart") {
       const button = event.target.closest("base-button");
+      if (selectedSize === null) {
+        document.querySelector(".product-detail-size").classList.add("border", "border-warning");
+        document.querySelector(".text-error").classList.remove("hidden");
+        return;
+      }
       if (!button) return;
 
       const product = {
@@ -20,6 +35,9 @@ export function productDetail(data) {
         category: button.dataset.category,
         gender: button.dataset.gender,
         image: button.dataset.image,
+        size: selectedSize,
+        features: button.dataset.features,
+        description: button.dataset.description,
         price: {
           currency: button.dataset.currency,
           amount: parseFloat(button.dataset.amount),
@@ -58,23 +76,27 @@ export function productDetail(data) {
               <h5 class="font-semibold">Select Size</h5>
               <a href="#">Size Guide</a>
             </div>
-            <div class="product-detail-size">
-              ${
-                data.sizes
-                  ? Object.keys(data.sizes)
-                      .map(
-                        size => `
-                        <base-button 
-                          variant="secondary" 
-                          type="status" 
-                          text="${size}" 
-                          class="grow"
-                        ></base-button>`
-                      )
-                      .join("")
-                  : "<p>No sizes available</p>"
-              }
-            </div>
+              <div>
+                <div class="product-detail-size rounded">
+                  ${
+                    data.sizes
+                      ? Object.keys(data.sizes)
+                          .map(
+                            size => `
+                            <base-button 
+                              variant="secondary" 
+                              type="status" 
+                              text="${size}" 
+                              class="grow"
+                              action="select-size"
+                            ></base-button>`
+                          )
+                          .join("")
+                      : "<p>No sizes available</p>"
+                  }
+                </div>
+               <p class='hidden text-error text-p2 pt-2'>Please select a size.</p>
+             </div>
           </div>
 
           <!-- action Button  -->
@@ -90,6 +112,8 @@ export function productDetail(data) {
               data-image="${data.images}"
               data-currency="${data.price?.currency || ""}"
               data-amount="${data.price?.amount || 0}"
+              data-features="${data.features}"
+              data-description="${data.description}"
             ></base-button>
             <base-button 
               text="Favorite" 
@@ -103,6 +127,8 @@ export function productDetail(data) {
               data-image="${data.images}"
               data-currency="${data.price?.currency || ""}"
               data-amount="${data.price?.amount || 0}"
+              data-features="${data.features}"
+              data-description="${data.description}"
             ></base-button>
           </div>
 

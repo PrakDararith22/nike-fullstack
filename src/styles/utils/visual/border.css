@@ -23,26 +23,29 @@
 /* ========== Border Style ========== */
 .border-solid {
   border-style: solid;
-} /* solid */
+}
+
 .border-dashed {
   border-style: dashed;
-} /* dashed */
+}
+
 .border-dotted {
   border-style: dotted;
-} /* dotted */
+}
 
 /* ========== Border Color ========== */
 .border-default {
   border-color: var(--gray-600);
-} /* default gray */
+}
+
 .border-black {
   border-color: var(--black);
-} /* black */
+}
+
 .border-white {
   border-color: var(--white);
-} /* white */
+}
 
-/* You can add more color-based borders as needed: */
 .border-gray-300 {
   border-color: var(--gray-300);
 }
@@ -59,9 +62,12 @@
   border-color: var(--gray-600);
 }
 
+.border-warning {
+  border-color: var(--color-error);
+}
+
 /* ========== Border Sides ========== */
 
-/* Single-side border with default color and solid style */
 .border-t {
   border-top: var(--border-width-thin) solid var(--gray-600);
 }
