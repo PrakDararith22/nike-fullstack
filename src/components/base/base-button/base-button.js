@@ -1,8 +1,6 @@
-import { heart } from "@assets";
-
 class BaseButton extends BaseComponent {
   static get observedAttributes() {
-    return ["text", "variant", "icon", "type", "size", "to"];
+    return ["text", "variant", "icon", "type", "size", "to", "action"];
   }
 
   constructor() {
@@ -13,16 +11,31 @@ class BaseButton extends BaseComponent {
     this.type = "action";
     this.size = "";
     this.to = "";
+    this.action = "";
   }
 
   connectedCallback() {
     super.connectedCallback();
     this.updateTemplate();
-    this.addEventListener("click", () => {
+    this.addEventListener("click", event => {
+      this.emitAction();
       if (this.to) {
         window.location.href = this.to;
       }
     });
+  }
+
+  emitAction() {
+    if (this.disabled || !this.action) return;
+    this.dispatchEvent(
+      new CustomEvent("base-button", {
+        bubbles: true,
+        composed: true,
+        detail: {
+          action: this.action,
+        },
+      })
+    );
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -50,6 +63,10 @@ class BaseButton extends BaseComponent {
         }
         case "to": {
           this.to = newValue || "";
+          break;
+        }
+        case "action": {
+          this.action = newValue || "";
           break;
         }
         default: {
