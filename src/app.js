@@ -1,4 +1,4 @@
-import { Router } from "./utils/router,";
+import { Router } from "@utility";
 import data from "./data/data.json";
 import {
   homePage,
@@ -21,8 +21,6 @@ router.route("/cart", cartPage());
 router.route("/favorite", favoritePage());
 
 router.route("/:category", ({ category }) => {
-  const categoryLower = category.toLowerCase();
-
   const filtered = products.filter(
     product =>
       product.gender.toLowerCase() === category.toLowerCase() ||
@@ -30,7 +28,6 @@ router.route("/:category", ({ category }) => {
       (category.toLowerCase() === "new-and-featured" && product.availability?.isNewRelease) ||
       (category.toLowerCase() === "sale" && product.price?.discount?.isActive)
   );
-  console.log(filtered);
 
   return productList(filtered, category);
 });
