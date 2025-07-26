@@ -67,10 +67,7 @@ export function cartPage() {
                         price="${item.price.amount}"
                         discount-percentage="${item?.price?.discount?.isActive ? item.price.discount.value : ""}"
                         image="${item.image || image}"
-                        feature='${JSON.stringify([
-                          `Colour Shown: ${item.color}`,
-                          `Style: ${item.id}`,
-                        ])}'
+                        feature='${JSON.stringify(item.features.split(",").map(f => f.trim()))}'
                     ></cart-item>`
                   )
                   .join("")}

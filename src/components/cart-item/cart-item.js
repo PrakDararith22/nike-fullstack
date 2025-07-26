@@ -1,4 +1,4 @@
-import "./cart.css";
+import "./cart-item.css";
 import { heart, trash } from "@assets";
 
 class CartItem extends BaseComponent {
@@ -53,12 +53,21 @@ class CartItem extends BaseComponent {
   }
 
   updateTemplate() {
+    const features = (() => {
+      try {
+        console.log(JSON.parse(this.feature || "[]"));
+
+        return JSON.parse(this.feature || "[]");
+      } catch (e) {
+        console.warn("Invalid feature format", e);
+        return [];
+      }
+    })();
     this.template = /* html */ `
         <div class="flex gap-4 border-b py-8">
             <!-- image -->
-            <img src="${this.image}" class="cart-item-image"/>
-
-
+          
+              <img src="${this.image}" class="cart-item-image"/>
              <!-- information section -->
             <div class="flex flex-col gap-2 w-full">
 
@@ -86,9 +95,7 @@ class CartItem extends BaseComponent {
                   <!-- feature information section -->
                 <div class="flex gap-6 justify-between">
                     <div class="text-gray-800 font-semibold">
-                      ${JSON.parse(this.feature)
-                        .map(item => `<p>${item}</p>`)
-                        .join("")}
+                      ${features.map(f => `<p>${f}</p>`).join("")}
                         <div>
                             <p>Size</p>
                             <p>Quatity</P>
