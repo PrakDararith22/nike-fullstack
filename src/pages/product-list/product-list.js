@@ -1,7 +1,6 @@
 import "@components";
 import "./product-list.css";
 import { sliders, chevron } from "@assets";
-import image from "../../assets/shoe.png";
 
 export function productList(data, category) {
   const formattedCategory = category.replace(/-/g, " ");

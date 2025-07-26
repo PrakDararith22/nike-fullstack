@@ -1,9 +1,34 @@
 import "@components";
 import { heart, chevron } from "@assets";
-import shoe from "../../assets/shoe.png";
 import "./product-detail.css";
+import { StorageList } from "@utility";
+import shoe from "../../assets/shoe.png";
 
 export function productDetail(data) {
+  const cart = new StorageList("cart");
+
+  document.addEventListener("base-button", event => {
+    const action = event.detail?.action;
+    if (action === "add-cart") {
+      const button = event.target.closest("base-button");
+      if (!button) return;
+
+      const product = {
+        id: button.dataset.id,
+        name: button.dataset.name,
+        brand: button.dataset.brand,
+        category: button.dataset.category,
+        gender: button.dataset.gender,
+        image: button.dataset.image,
+        price: {
+          currency: button.dataset.currency,
+          amount: parseFloat(button.dataset.amount),
+        },
+      };
+      cart.add(product);
+    }
+  });
+
   const price = data.price?.amount
     ? `${data.price.currency} ${data.price.amount.toFixed(2)}`
     : "Price Unavailable";
@@ -13,22 +38,12 @@ export function productDetail(data) {
     <top-message-bar></top-message-bar>
 
     <div class="product-list">
-      <!-- Mobile detail -->
-      <div class="hide-desktop py-5">
-        <h5 class="text-warning font-semibold">Bestseller</h5>
-        <h4 class="font-medium">${data.name}</h4>
-        <p class="text-p2 font-regular">${data.gender}'s Shoes</p>
-        <p class="text-p2 font-regular pb-3">${data.colors?.length || 0} colours</p>
-        <h4 class="font-regular">${price}</h4>
-      </div>
-
+      <!-- Detail Section -->
       <div class="product-detail-detail gap-10 pt-4">
-        <!-- Image -->
         <product-card image="${data.images}"></product-card>
 
-        <!-- Size and Info -->
         <div class="flex flex-col gap-5">
-          <!-- Desktop detail -->
+          <!-- Product Info -->
           <div class="show-desktop text-p0">
             <h5 class="text-warning font-semibold">Bestseller</h5>
             <h4 class="font-medium">${data.name}</h4>
@@ -37,7 +52,7 @@ export function productDetail(data) {
             <h4 class="text-p3 font-medium">${price}</h4>
           </div>
 
-          <!-- Size selection -->
+          <!-- Size Selection -->
           <div class="flex flex-col gap-4">
             <div class="flex justify-between items-center">
               <h5 class="font-semibold">Select Size</h5>
@@ -45,14 +60,14 @@ export function productDetail(data) {
             </div>
             <div class="product-detail-size">
               ${
-                data.sizes?.length
-                  ? data.sizes
+                data.sizes
+                  ? Object.keys(data.sizes)
                       .map(
                         size => `
                         <base-button 
                           variant="secondary" 
                           type="status" 
-                          text="${size.us}" 
+                          text="${size}" 
                           class="grow"
                         ></base-button>`
                       )
@@ -62,21 +77,43 @@ export function productDetail(data) {
             </div>
           </div>
 
-          <!-- Buttons -->
+          <!-- action Button  -->
           <div class="flex flex-col gap-2">
-            <base-button text="Add to Bag"></base-button>
-            <base-button text="Favorite" variant="secondary" icon="${heart}"></base-button>
+              <base-button 
+              text="Add to Bag" 
+              action="add-cart"
+              data-id="${data.id}"
+              data-name="${data.name}"
+              data-brand="${data.brand}"
+              data-category="${data.category}"
+              data-gender="${data.gender}"
+              data-image="${data.images}"
+              data-currency="${data.price?.currency || ""}"
+              data-amount="${data.price?.amount || 0}"
+            ></base-button>
+            <base-button 
+              text="Favorite" 
+              variant="secondary" 
+              icon="${heart}" 
+              data-id="${data.id}"
+              data-name="${data.name}"
+              data-brand="${data.brand}"
+              data-category="${data.category}"
+              data-gender="${data.gender}"
+              data-image="${data.images}"
+              data-currency="${data.price?.currency || ""}"
+              data-amount="${data.price?.amount || 0}"
+            ></base-button>
           </div>
 
           <!-- Description -->
           <div class="flex flex-col gap-3 text-p2 font-medium">
             <p>${data.description || ""}</p>
             <ul class="pl-7">
-              ${data.features?.length ? data.features.map(f => `<li>${f}</li>`).join("") : ""}
+              ${data.features?.map(f => `<li>${f}</li>`).join("") || ""}
             </ul>
           </div>
 
-          <!-- Accordion -->
           <base-accordion 
             title="Free Delivery and Returns" 
             icon="${chevron}"
@@ -84,7 +121,7 @@ export function productDetail(data) {
         </div>
       </div>
 
-      <!-- Recommended section -->
+      <!-- Recommendations -->
       <div class="py-4">
         <h2 class="font-medium pb-5">You might also like</h2>
         <div class="grid-container">
