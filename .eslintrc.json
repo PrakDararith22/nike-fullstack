@@ -22,7 +22,7 @@
         "map": [
           ["@assets", "./src/assets/assets.js"],
           ["@components", "./src/components/index.js"],
-          ["@data", "./src/data"],
+          ["@data", "./src/data/data.json"],
           ["@utility", "./src/utility/utility.js"]
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx", ".svg"]

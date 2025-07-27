@@ -26,7 +26,6 @@ class searchInput extends BaseComponent {
   }
 
   emitAction() {
-    console.log("search input here");
     if (this.disabled || !this.action) return;
     this.dispatchEvent(
       new CustomEvent("search-input", {
@@ -37,6 +36,10 @@ class searchInput extends BaseComponent {
         },
       })
     );
+  }
+
+  getValue() {
+    return this.querySelector("input").value;
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -71,7 +74,6 @@ class searchInput extends BaseComponent {
       input: "py-4 border rounded-sm bg-transparent",
       default: "rounded-lg bg-gray-200",
     };
-    console.log(this.type);
     this.template = `
     <div class="search-input  flex items-center px-1  w-full flex items-center
     ${typeMap[this.type] || typeMap.default}">

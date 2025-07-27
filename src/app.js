@@ -1,5 +1,5 @@
 import { Router } from "@utility";
-import data from "./data/data.json";
+import data from "@data";
 import {
   homePage,
   productDetail,
@@ -12,37 +12,50 @@ import {
 const router = new Router("app");
 const products = data.datas;
 
-router.route("/", homePage());
-router.route("/home", homePage());
-router.route("/signin", authPage("signin"));
-router.route("/password", authPage("password"));
-router.route("/reset", authPage("reset"));
-router.route("/cart", cartPage());
-router.route("/favorite", favoritePage());
-
-router.route("/:category", ({ category }) => {
-  const filtered = products.filter(
-    product =>
-      product.gender.toLowerCase() === category.toLowerCase() ||
-      product.brand.toLowerCase() === category.toLowerCase() ||
-      (category.toLowerCase() === "new-and-featured" && product.availability?.isNewRelease) ||
-      (category.toLowerCase() === "sale" && product.price?.discount?.isActive)
+if (!localStorage.getItem("users")) {
+  localStorage.setItem(
+    "users",
+    JSON.stringify([{ email: "test@example.com", password: "password123", role: "user" }])
   );
+}
 
-  return productList(filtered, category);
-});
-
-router.route("/:category/:productId", ({ category, productId }) => {
-  const productData = products.find(
+function filterByCategory(category) {
+  const c = category.toLowerCase();
+  return products.filter(
     product =>
-      product.id.toString() === productId &&
-      (product.gender.toLowerCase() === category.toLowerCase() ||
-        product.brand.toLowerCase() === category.toLowerCase() ||
-        (category.toLowerCase() === "new-and-featured" && product.availability?.isNewRelease) ||
-        (category.toLowerCase() === "sale" && product.price?.discount?.isActive))
+      product.gender.toLowerCase() === c ||
+      product.brand.toLowerCase() === c ||
+      (c === "new-and-featured" && product.availability?.isNewRelease) ||
+      (c === "sale" && product.price?.discount?.isActive)
   );
-  return productData ? productDetail(productData) : "<h1>Product Not Found</h1>";
-});
+}
+
+router.route("/", () => homePage(), { roles: ["guest", "user"] });
+router.route("/home", () => homePage(), { roles: ["guest", "user"] });
+router.route("/signin", () => authPage("signin"), { roles: ["guest"] });
+router.route("/password", () => authPage("password"), { roles: ["guest"] });
+router.route("/reset", () => authPage("reset"), { roles: ["guest"] });
+router.route("/cart", () => cartPage(), { roles: ["guest", "user"] });
+router.route("/favorite", () => favoritePage(), { roles: ["user"] });
+
+router.route(
+  "/:category",
+  ({ category }) => {
+    const filtered = filterByCategory(category);
+    return productList(filtered, category);
+  },
+  { roles: ["user", "guest"] }
+);
+
+router.route(
+  "/:category/:productId",
+  ({ category, productId }) => {
+    const filtered = filterByCategory(category);
+    const productData = filtered.find(p => p.id.toString() === productId);
+    return productData ? productDetail(productData) : "<h1>Product Not Found</h1>";
+  },
+  { roles: ["user", "guest"] }
+);
 
 window.addEventListener("DOMContentLoaded", () => {
   router.init();

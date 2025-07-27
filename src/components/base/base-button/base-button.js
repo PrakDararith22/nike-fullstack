@@ -30,7 +30,6 @@ class BaseButton extends BaseComponent {
     this.dispatchEvent(
       new CustomEvent("base-button", {
         bubbles: true,
-        composed: true,
         detail: {
           action: this.action,
         },

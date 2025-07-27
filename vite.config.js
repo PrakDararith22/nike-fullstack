@@ -16,7 +16,7 @@ export default defineConfig({
     alias: {
       "@assets": path.resolve(dirname, "./src/assets/assets.js"),
       "@components": path.resolve(dirname, "./src/components/index.js"),
-      "@data": path.resolve(dirname, "./src/data"),
+      "@data": path.resolve(dirname, "./src/data/data.json"),
       "@utility": path.resolve(dirname, "./src/utility/utility.js"),
     },
   },
