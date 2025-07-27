@@ -78,7 +78,7 @@ class BaseHeader extends BaseComponent {
       <!-- icon section -->
       <div class="base-header-span justify-self-end">
         <div class="flex">
-          <search-input text="search"  class="hide-mobile" action="searchClose"></search-input>
+          <search-input text="search"  class="hide-mobile" icon=${search} action="searchClose"></search-input>
           <icon-button icon="${cartEmpty}" to="/cart"></icon-button>
           <icon-button icon="${search}" action="search-panel" class="hide-tablet hide-desktop"></icon-button>
           <icon-button icon="${heart}" to="/favorite"></icon-button>

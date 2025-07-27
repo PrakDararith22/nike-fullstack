@@ -14,6 +14,7 @@
   display: grid;
   gap: 4px;
   grid-template-columns: repeat(3, 1fr);
+  padding: 1px;
 }
 
 @media (width >= 1024px) {

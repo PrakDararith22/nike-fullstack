@@ -1,10 +1,8 @@
 import "@components";
 import "./product-list.css";
 import { sliders, chevron } from "@assets";
-import image from "../../assets/shoe.png";
 
 export function productList(data, category) {
-  const formattedCategory = category.replace(/-/g, " ");
   return /* html */ `
     <base-header></base-header>
     <top-message-bar></top-message-bar>
@@ -37,7 +35,8 @@ export function productList(data, category) {
                   ? `${product.price.currency} ${product.price.amount.toFixed(2)}`
                   : "Price Unavailable";
                 return `
-					<a href="/${formattedCategory.replace(/&/g, "and").replace(/\s+/g, "-")}/${product.id}">
+					<a href="/${category.replace(/-/g, " ").replace(/&/g, "and").replace(/\s+/g, "-")}/${product.id}">
+
 						<product-card
 							title="${product.name}"
 							category="${product.category}"
