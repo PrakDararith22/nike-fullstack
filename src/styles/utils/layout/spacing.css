@@ -521,6 +521,11 @@
   padding-right: var(--space-12);
 }
 
+.py-1-half {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
 .py-1 {
   padding-top: var(--space-1);
   padding-bottom: var(--space-1);
