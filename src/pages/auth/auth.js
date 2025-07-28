@@ -4,13 +4,6 @@ import { jordan, nike } from "@assets";
 import { auth } from "@utility";
 
 export function authPage(variant) {
-  console.log(
-    "authPage loaded, variant:",
-    variant,
-    "sessionStorage authEmail:",
-    sessionStorage.getItem("authEmail")
-  );
-
   const content = {
     signin: {
       title: "Enter your email to join us or sign in.",
@@ -47,21 +40,16 @@ export function authPage(variant) {
     });
 
     if (actions === "signin") {
-      // Always store email for password page
-      console.log("Storing email:", values.Email);
       sessionStorage.setItem("authEmail", values.Email);
-      console.log("Email stored, sessionStorage value:", sessionStorage.getItem("authEmail"));
 
       if (auth.getUsers().find(item => item.email === values.Email)) {
         window.location.href = "/password";
       } else {
-        // Handle case where user doesn't exist (show error or create account)
         console.log("User not found");
       }
     }
 
     if (actions === "password") {
-      // Get email from sessionStorage or from current input
       const email = sessionStorage.getItem("authEmail") || values.Email;
 
       if (auth.login(email, values.Password)) {
@@ -71,10 +59,8 @@ export function authPage(variant) {
     }
   });
 
-  // Get stored email for password variant display
   const storedEmail = sessionStorage.getItem("authEmail");
 
-  // Update content for password variant to show stored email
   if (variant === "password" && storedEmail) {
     content.password.text = `${storedEmail} <a>Edit</a>`;
   }
@@ -118,10 +104,10 @@ export function authPage(variant) {
           ${
             variant === "reset"
               ? `<base-button
-            text="${content[variant].secondaryButtonText}"
-            size="medium"
-            action="reset-secondary"
-          ></base-button>`
+                  text="${content[variant].secondaryButtonText}"
+                  size="medium"
+                  action="reset-secondary"
+                ></base-button>`
               : ""
           }
         </div>

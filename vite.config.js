@@ -18,7 +18,7 @@ export default defineConfig({
       "@components": path.resolve(dirname, "./src/components/index.js"),
       "@data": path.resolve(dirname, "./src/data/data.json"),
       "@utility": path.resolve(dirname, "./src/utility/utility.js"),
-      "@pages": path.resolve(dirname, "src/pages/index.js"),
+      "@pages": path.resolve(dirname, "src/pages/pages.js"),
     },
   },
   plugins: [

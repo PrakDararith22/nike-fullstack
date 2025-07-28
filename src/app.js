@@ -7,17 +7,12 @@ import {
   authPage,
   cartPage,
   favoritePage,
-} from "./pages/index";
+  notFoundPage,
+} from "./pages/pages";
 
 const router = new Router("app");
-const products = data.datas;
-
-if (!localStorage.getItem("users")) {
-  localStorage.setItem(
-    "users",
-    JSON.stringify([{ email: "test@example.com", password: "password123", role: "user" }])
-  );
-}
+const products = data.data;
+const Categories = ["new-and-featured", "men", "women", "kids", "jordan", "sale"];
 
 function filterByCategory(category) {
   const c = category.toLowerCase();
@@ -30,17 +25,19 @@ function filterByCategory(category) {
   );
 }
 
-router.route("/", () => homePage(), { roles: ["guest", "user"] });
-router.route("/home", () => homePage(), { roles: ["guest", "user"] });
+router.route("/", () => homePage(products), { roles: ["guest", "user"] });
+router.route("/home", () => homePage(products), { roles: ["guest", "user"] });
 router.route("/signin", () => authPage("signin"), { roles: ["guest"] });
 router.route("/password", () => authPage("password"), { roles: ["guest"] });
 router.route("/reset", () => authPage("reset"), { roles: ["guest"] });
 router.route("/cart", () => cartPage(), { roles: ["guest", "user"] });
 router.route("/favorite", () => favoritePage(), { roles: ["user"] });
-
 router.route(
   "/:category",
   ({ category }) => {
+    if (!Categories.includes(category.toLowerCase())) {
+      return notFoundPage();
+    }
     const filtered = filterByCategory(category);
     return productList(filtered, category);
   },
@@ -52,7 +49,7 @@ router.route(
   ({ category, productId }) => {
     const filtered = filterByCategory(category);
     const productData = filtered.find(p => p.id.toString() === productId);
-    return productData ? productDetail(productData) : "<h1>Product Not Found</h1>";
+    return productData ? productDetail(productData, products) : "<h1>Product Not Found</h1>";
   },
   { roles: ["user", "guest"] }
 );
