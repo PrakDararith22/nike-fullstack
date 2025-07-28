@@ -64,9 +64,8 @@ class ProductCard extends BaseComponent {
       <div>
         <h5 class="text-warning font-semibold">${this.status}<h5>
         <h4 class="font-medium">${this.title}</h4>
-        <p class="text-p2 font-regular">${this.category}</p>
-        <p class="text-p2 font-regular pb-3">8 colours</p>
-        <h4 class="font-regular">${this.price}</h4>
+        <p class="text-p2 font-regular pt-1">${this.category}</p>
+        <h4 class="font-regular pt-4">${this.price}</h4>
       </div>
 
     </div>
