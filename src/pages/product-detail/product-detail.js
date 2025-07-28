@@ -4,7 +4,7 @@ import "./product-detail.css";
 import { StorageList } from "@utility";
 import shoe from "../../assets/shoe.png";
 
-export function productDetail(data) {
+export function productDetail(data, products) {
   const cart = new StorageList("cart");
   let selectedSize = null;
 
@@ -56,18 +56,21 @@ export function productDetail(data) {
     <top-message-bar></top-message-bar>
 
     <div class="product-list">
-      <!-- Detail Section -->
+      <!-- mobile Detail Section -->
       <div class="product-detail-detail gap-10 pt-4">
+         <div class="hide-desktop text-p0">
+            <h3 class="font-medium pt-3">${data.name}</h3>
+            <p class="font-regular font-semibold text-p2 pt-1">${data.gender}'s Shoes</p>
+            <h4 class="text-p3 font-medium pt-6 pb-4">${price}</h4>
+          </div>
         <product-card image="${data.images}"></product-card>
-
+  
         <div class="flex flex-col gap-5">
-          <!-- Product Info -->
-          <div class="show-desktop text-p0">
-            <h5 class="text-warning font-semibold">Bestseller</h5>
-            <h4 class="font-medium">${data.name}</h4>
-            <p class="font-regular">${data.gender}'s Shoes</p>
-            <p class="font-regular pb-3">${data.colors?.length || 0} colours</p>
-            <h4 class="text-p3 font-medium">${price}</h4>
+          <!-- desktop Product Info -->
+          <div class="show-desktop">
+            <h4 class="font-medium text-h2">${data.name}</h4>
+            <p class="font-semibold">${data.gender}'s Shoes</p>
+            <h4 class="text-p3 font-medium pt-4">${price}</h4>
           </div>
 
           <!-- Size Selection -->
@@ -84,6 +87,7 @@ export function productDetail(data) {
                           .map(
                             size => `
                             <base-button 
+                              size="medium"
                               variant="secondary" 
                               type="status" 
                               text="${size}" 
@@ -102,6 +106,7 @@ export function productDetail(data) {
           <!-- action Button  -->
           <div class="flex flex-col gap-2">
               <base-button 
+              size="large"
               text="Add to Bag" 
               action="add-cart"
               data-id="${data.id}"
@@ -117,6 +122,7 @@ export function productDetail(data) {
             ></base-button>
             <base-button 
               text="Favorite" 
+              size="large"
               variant="secondary" 
               icon="${heart}" 
               data-id="${data.id}"
@@ -134,8 +140,8 @@ export function productDetail(data) {
 
           <!-- Description -->
           <div class="flex flex-col gap-3 text-p2 font-medium">
-            <p>${data.description || ""}</p>
-            <ul class="pl-7">
+            <p class="font-semibold px-1">${data.description || ""}</p>
+            <ul class="font-semibold pl-7">
               ${data.features?.map(f => `<li>${f}</li>`).join("") || ""}
             </ul>
           </div>
@@ -148,17 +154,20 @@ export function productDetail(data) {
       </div>
 
       <!-- Recommendations -->
-      <div class="py-4">
+      <div class="py-6">
         <h2 class="font-medium pb-5">You might also like</h2>
-        <div class="grid-container">
-          ${Array(7)
-            .fill("")
+        <div class="grid-container overflow-x-auto scrollbar-hidden">
+          ${products
             .map(
-              () => `
-              <product-card 
-                title="Nike Sportswear Chill Knit" 
-                image="${shoe}"
-              ></product-card>`
+              item => `
+              <a href="/${item.gender}/${item.id}"}">
+                <product-card 
+                  title="${item.name}" 
+                  image="${item.images}"
+                  category="${item.features[0]}"
+                  price="QAR ${item.price.amount}"
+                ></product-card>
+              </a>`
             )
             .join("")}
         </div>
