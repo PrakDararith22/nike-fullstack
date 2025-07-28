@@ -38,9 +38,9 @@ class TopMessagebar extends BaseComponent {
 
   updateTemplate() {
     this.template = `
-    <div class="top-message-bar bg-gray-200 flex gap-1 justify-center items-center px-4">
+    <div class="top-message-bar bg-gray-100  whitespace-nowrap flex gap-1 justify-center items-center px-4">
         <p class="text-p3">Free Delivery, Member Exclusive Products and Promos for all our Members.</p>
-       <u> <a href=${this.href} class="text-p3 font-semibold">${this.linktext}</a> </u>
+       <u> <a href="/signin" class="text-p3 font-semibold">${this.linktext}</a> </u>
     </div>
     `;
     this.render();
