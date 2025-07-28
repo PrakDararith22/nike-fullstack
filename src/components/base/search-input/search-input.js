@@ -1,6 +1,6 @@
 class searchInput extends BaseComponent {
   static get observedAttributes() {
-    return ["text", "disabled", "action", "type", "icon"];
+    return ["text", "disabled", "action", "type", "icon", "size"];
   }
 
   constructor() {
@@ -57,6 +57,9 @@ class searchInput extends BaseComponent {
         case "type":
           this.type = newValue || "";
           break;
+        case "size":
+          this.size = newValue || "";
+          break;
         case "icon":
           this.icon = newValue || "";
           break;
@@ -70,13 +73,19 @@ class searchInput extends BaseComponent {
 
   updateTemplate() {
     const typeMap = {
-      search: "rounded-lg bg-gray-200",
-      input: "py-4 border rounded-sm bg-transparent",
-      default: "rounded-lg bg-gray-200",
+      search: " rounded-max bg-gray-100",
+      input: " border py-4 rounded-sm bg-transparent",
+      default: " rounded-lg bg-gray-100 ",
+    };
+    const sizeMap = {
+      small: "py-1-half",
+      medium: "py-1",
+      large: "py-2",
     };
     this.template = `
     <div class="search-input  flex items-center px-1  w-full flex items-center
-    ${typeMap[this.type] || typeMap.default}">
+    ${typeMap[this.type] || typeMap.default}
+    ${sizeMap[this.size] || sizeMap.default}">
       <icon-button icon="${this.icon}" size="0.9"></icon-button>
       <input type="text" placeholder="${this.text} ${this.disabled ? "disabled" : ""}" 
       class="outline-none border-none body-sm w-full bg-transparent text-p2 font-semibold text-gray-500"/>
