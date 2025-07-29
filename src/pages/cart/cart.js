@@ -39,10 +39,10 @@ export function cartPage() {
   });
 
   return /* html */ `
-<div>
+<div class="cart-page flex flex-col">
     <base-header></base-header>
     <top-message-bar></top-message-bar>
-    <div class="cart mx-auto flex flex-col px-7  gap-12 pb-12 mb-12">
+    <div class="cart grow mx-auto flex flex-col px-7  gap-12 pb-12 mb-12">
         <!-- title section -->
         <div class="border-b w-full flex flex-col items-center py-6 hide-desktop">
             <p class="font-semibold text-h3 text-center">Bag</p>

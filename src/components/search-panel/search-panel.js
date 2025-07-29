@@ -1,16 +1,7 @@
 import "./search-panel.css";
-import { cross } from "@assets";
+import { cross, nike } from "@assets";
 
 class SearchPanel extends BaseComponent {
-  static get observedAttributes() {
-    return ["test"];
-  }
-
-  constructor() {
-    super();
-    this.test = "";
-  }
-
   connectedCallback() {
     super.connectedCallback();
     this.updateTemplate();
@@ -23,27 +14,9 @@ class SearchPanel extends BaseComponent {
   }
 
   togglePanel() {
-    console.log("clicked");
-
     const panel = this.querySelector(".search-panel");
     if (panel) {
       panel.classList.toggle("open");
-    }
-  }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (oldValue !== newValue) {
-      switch (name) {
-        case "icon": {
-          this.icon = newValue || "";
-          break;
-        }
-        default: {
-          console.warn(`Unhandled observed attribute: ${name}`);
-          break;
-        }
-      }
-      this.updateTemplate();
     }
   }
 
@@ -51,16 +24,20 @@ class SearchPanel extends BaseComponent {
     this.template = /* html */ `
     <div class="search-panel fixed z-tooltip w-full top-0 right-0 ">
         <div class="search-panel-content bg-white pt-4 px-8">
-          <div class="flex gap-5">
-              <search-input text="Search" class="grow"></search-input>
-              <icon-button icon="${cross}" action="searchClose"></icon-button>
+          <div class="flex gap-12">
+            <icon-button icon=${nike} size="2" class="hide-mobile"></icon-button>
+              <div class="flex flex-col grow">
+                <search-input text="Search" type="search" size="large"></search-input>
+                <div class="pt-10 flex flex-col gap-4">
+                <p class="text-p3 font-semibold text-gray-500">Popular Search Terms</p>
+                <div class="flex flex-col gap-2 text">
+                  <a href="Jordan">Jordan</a>
+                  <a>sale</a>
+                  <a>New & Featured</a>
+                </div>
+              </div>
           </div>
-
-          <div class="px-8 pt-10 flex flex-col gap-4">
-              <p>Popular Search Terms</p>
-              <h3>kobe</h3>
-              <h3>kobe</h3>
-              <h3>kobe</h3>
+              <icon-button icon="${cross}" action="searchClose"></icon-button>
           </div>
         </div>
     </div>

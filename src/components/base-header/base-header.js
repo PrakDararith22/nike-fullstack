@@ -54,15 +54,15 @@ class BaseHeader extends BaseComponent {
 
   updateTemplate() {
     this.template = /* html */ `
-    <div class="base-header items-center">
+    <div class="base-header items-center mx-3">
       <!-- logo section -->
       <div class="base-header-span justify-self-start">
-        <icon-button icon="${nike}" size="2" to="/home"></icon-button>
+        <icon-button icon="${nike}" size="2.2" to="/home"></icon-button>
       </div>
 
       <!-- menu section -->
       <div class="base-header-span justify-self-center">
-        <div class="flex gap-6 hide-mobile text-h5">
+        <div class="flex gap-6 hide-mobile text-h5 whitespace-nowrap">
           ${this.menu
             .map(item => {
               const path = item
@@ -78,7 +78,7 @@ class BaseHeader extends BaseComponent {
       <!-- icon section -->
       <div class="base-header-span justify-self-end">
         <div class="flex">
-          <search-input text="search"  class="hide-mobile" icon=${search} action="searchClose"></search-input>
+          <search-input text="search" type="search" size="small" class="hide-mobile" icon=${search} action="searchClose"></search-input>
           <icon-button icon="${cartEmpty}" to="/cart"></icon-button>
           <icon-button icon="${search}" action="search-panel" class="hide-tablet hide-desktop"></icon-button>
           <icon-button icon="${heart}" to="/favorite"></icon-button>

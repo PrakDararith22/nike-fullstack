@@ -17,3 +17,7 @@
 .rounded-xl {
   border-radius: var(--radius-2xl);
 }
+
+.rounded-max {
+  border-radius: 999px;
+}

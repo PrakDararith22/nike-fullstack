@@ -24,9 +24,33 @@
 @media (width >= 1024px) {
   .base-footer {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-columns: 0.2fr 2fr 0.5fr;
+    grid-template-rows: 2fr 1fr;
+    padding: 45px 48px 0;
+  }
+
+  .base-footer-legal-link {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .base-footer-2col {
+    grid-column: span 2;
+  }
+
+  .base-footer-border {
+    border-bottom: none;
+  }
+}
+
+@media (width >= 1400px) {
+  .base-footer {
+    display: grid;
+    grid-template-columns: 0.2fr 2fr 0.5fr;
     grid-template-rows: 2fr 1fr;
     padding: 48px;
+    width: 1400px;
+    margin: 0 auto;
   }
 
   .base-footer-legal-link {

@@ -80,29 +80,29 @@ class BaseButton extends BaseComponent {
   updateTemplate() {
     const variantMap = {
       primary: " bg-black text-white",
-      secondary: "bg-white text-black ",
+      secondary: " bg-white text-black ",
       default: " bg-black text-white ",
     };
 
     const typeMap = {
-      action: " rounded-lg",
+      action: " rounded-max",
       status: " rounded",
     };
 
     const sizeMap = {
       small: " py-2",
-      medium: " py-3 rounded-xl",
-      large: " py-4 rounded-xl",
+      medium: " py-3 ",
+      large: " py-4 ",
       default: " py-2 ",
     };
 
     this.template = `
-    <button class="flex items-center border justify-center gap-2 outline-none  w-full px-5 text-p1 font-medium 
+    <button class="flex items-center border border-gray-300 justify-center gap-2 outline-none  w-full px-5 text-p1 font-medium pointer
       ${sizeMap[this.size] || sizeMap.default} 
       ${typeMap[this.type]} 
-      ${variantMap[this.variant]}">
+      ${variantMap[this.variant] || variantMap.default}">
       ${this.text}
-      <img src="${this.icon}" class="object-contain" style="width: 18px; height: auto;" />
+      ${this.icon ? `<img src="${this.icon}" class="object-contain" style="width: 18px; height: auto;" />` : ""}
 
     </button>
     `;
