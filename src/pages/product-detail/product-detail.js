@@ -2,7 +2,6 @@ import "@components";
 import { heart, chevron } from "@assets";
 import "./product-detail.css";
 import { StorageList } from "@utility";
-import shoe from "../../assets/shoe.png";
 
 export function productDetail(data, products) {
   const cart = new StorageList("cart");
@@ -149,7 +148,14 @@ export function productDetail(data, products) {
           <base-accordion 
             title="Free Delivery and Returns" 
             icon="${chevron}"
-          ></base-accordion>
+            content="
+            <ul>
+                  <li>You can return your order for any reason, free of charge, within 30 days. </li>
+                  <li>Free delivery on all orders for our members. Non-members will have free delivery on orders QAR 350 and above.</li>
+                  <li>Order delivery is usually within 3-4 working days.</li>
+            </ul>"
+          >
+          </base-accordion>
         </div>
       </div>
 

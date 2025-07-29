@@ -27,6 +27,11 @@ class BaseFooter extends BaseComponent {
       "ABOUT NIKE": ["Become a Member", "News", "Careers", "Investors", "Sustainability"],
       "NIKE APPS": ["Nike Run Club", "Nike Training Club"],
     };
+    console.log(
+      footerLinks["NIKE APPS"]
+        .map(link => `<a href="#" class="text-gray-300 text-p3">${link}</a>`)
+        .join(" ")
+    );
 
     this.template = /* html */ `
     <div class="bg-black ">
@@ -45,6 +50,16 @@ class BaseFooter extends BaseComponent {
             toggle-icon="${minusWhite}"
             title="GET HELP"
             no-border
+            content="
+            <div class='flex flex-col gap-2 text-p4'>
+              <a>Order Status</a>
+              <a>Shipping and Delivery</a>
+              <a>Returns</a>
+              <a>Payment Options</a>
+              <a>Contact Us</a>
+            </div>
+            
+            "
             ></base-accordion>
 
             <base-accordion 
@@ -52,6 +67,16 @@ class BaseFooter extends BaseComponent {
             toggle-icon="${minusWhite}"
             title="ABOUT NIKE"
             no-border
+            content="
+            <div class='flex flex-col gap-2 text-p4'>
+              <a>Become a Member</a>
+              <a>News</a>
+              <a>Careers</a>
+              <a>Investors</a>
+              <a>Sustainability</a>
+            </div>
+            
+            "
             ></base-accordion>
 
             <base-accordion 
@@ -59,6 +84,13 @@ class BaseFooter extends BaseComponent {
             toggle-icon="${minusWhite}"
             title="NIKE APPS"
              no-border
+               content="
+            <div class='flex flex-col gap-2 text-p4'>
+              <a>Nike Run Club</a>
+              <a>Nike Training Club</a>
+            </div>
+            
+            "
             ></base-accordion>
          </div>
 
@@ -77,7 +109,7 @@ class BaseFooter extends BaseComponent {
                   </div>
                 `;
               })
-              .join("")}
+              .join(" ")}
 
           </div>
 
