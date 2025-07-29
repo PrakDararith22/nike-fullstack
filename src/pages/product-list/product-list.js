@@ -1,17 +1,24 @@
 import "@components";
 import "./product-list.css";
-import { sliders, chevron } from "@assets";
+import { sliders, chevron, sort } from "@assets";
 
 export function productList(data, category) {
   return /* html */ `
+  <div class="product-list-page flex flex-col">
     <base-header></base-header>
     <top-message-bar></top-message-bar>
 
-    <div class="product-list">
-        <h2 class="font-medium pl-4 pb-7 border-b">${category}</h2>
+    <div class="product-list grow">
+	<div class="flex justify-between">
+        <h2 class="font-medium pb-7">${category}</h2>
+		<div class="flex">
+			<icon-button text="Hide Filter" icon="${sliders}" variant="secondary"></icon-button>
+			<icon-button text="Sort By" icon="${sort}" variant="secondary"></icon-button>
+		</div>
+	</div>
         <div>
 
-			<div class="flex items-center justify-between py-4">
+			<div class="flex items-center justify-between py-4 hide-desktop">
 				<p class="text-gray-800 font-semibold">${data.length} Results</p>
 				<base-button text="filter" icon="${sliders}" variant="secondary"></base-button>
 			</div>
@@ -21,9 +28,10 @@ export function productList(data, category) {
 
 				<!-- desktop filter panel -->
 				<div class="sticky flex flex-col align-between px-3 hide-mobile hide-tablet"> 
-					<base-accordion type="status" title="sdsf" icon="${chevron}">
-		
+					<base-accordion type="status" title="Gender" icon="${chevron}"
+					>
 					</base-accordion>
+					
 				</div>
 
 				<!-- product grid-->
@@ -44,7 +52,7 @@ export function productList(data, category) {
 							image="${product.images}"
 						></product-card>
 					</a>
-				`;
+						`;
               })
               .join("")}
 						
@@ -57,5 +65,6 @@ export function productList(data, category) {
     </div>
 
     <base-footer></base-footer>
+	</div>
   `;
 }

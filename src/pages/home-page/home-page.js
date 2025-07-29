@@ -54,7 +54,7 @@ export function homePage(product) {
                 type2= "lifestyle"
             ></showcase-card>
           </a>
-          <div class="home-page">
+          <div class="home-page py-2">
               <div class="home-page-product-grid">
                   ${showcaseCards
                     .map(
@@ -82,13 +82,14 @@ export function homePage(product) {
                       layout="bottomleft"
                       cta="shop"
                       type2= "lifestyle"
+                      color="black"
                   ></showcase-card>
                 </a>
 
                 <!-- product show case -->
                 <div class=" home-page-icon-container whitespace-nowrap ">
                   <h2 class="font-medium "> Shop Our Icons </h2>
-                    <div class="pt-5 overflow-x-auto scrollbar-hidden">
+                    <div class="py-5 overflow-x-auto scrollbar-hidden">
                        ${shuffleObjectValues(product)
                          .map(
                            item => `
