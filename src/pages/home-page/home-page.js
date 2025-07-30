@@ -14,7 +14,7 @@ export function homePage(product) {
       cta: "shop",
     },
     {
-      to: "man",
+      to: "men",
       image: banner2,
       title: "Total 90",
       description: "Look of Football",
