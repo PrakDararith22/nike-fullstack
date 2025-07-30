@@ -1,4 +1,5 @@
 import "@components";
+import "./base-accordion.css";
 
 class BaseAccordion extends BaseComponent {
   static get observedAttributes() {
@@ -21,12 +22,7 @@ class BaseAccordion extends BaseComponent {
     this.addEventListener("icon-button", event => {
       const identification = event.detail.action;
       if (identification === "accordion") {
-        this.open = !this.open;
-
-        const body = this.querySelector("#link-section");
-        if (body) {
-          body.classList.toggle("hidden", !this.open);
-        }
+        this.toggleAccordion();
       }
     });
   }
@@ -63,15 +59,61 @@ class BaseAccordion extends BaseComponent {
     }
   }
 
+  toggleAccordion() {
+    this.open = !this.open;
+    const content = this.querySelector("#link-section");
+    const wrapper = this.querySelector("#content-wrapper");
+    const iconButton = this.querySelector("icon-button");
+
+    if (content && wrapper) {
+      if (this.open) {
+        const height = wrapper.scrollHeight;
+        content.style.height = `${height}px`;
+        content.classList.add("open");
+        setTimeout(() => {
+          if (this.open) {
+            content.style.height = "auto";
+          }
+        }, 350);
+      } else {
+        const height = wrapper.scrollHeight;
+        content.style.height = `${height}px`;
+        requestAnimationFrame(() => {
+          content.style.height = "0px";
+          content.classList.remove("open");
+        });
+      }
+    }
+
+    if (iconButton) {
+      if (this.open) {
+        iconButton.classList.add("rotated");
+      } else {
+        iconButton.classList.remove("rotated");
+      }
+    }
+  }
+
   updateTemplate() {
     this.template = /* html */ `
-    <div class=" ${this.Noborder ? "" : "border-y  border-gray-200"}">
-        <div class="flex items-center justify-between py-4"> 
-            <p>${this.title}</p>
-            <icon-button icon="${this.icon}" toggle-icon="${this.toggleIcon}" action="accordion" ></icon-button>
+    <style>
+   
+    </style>
+    <div class="${this.Noborder ? "" : "border-y border-gray-200"}">
+        <div class="accordion-header flex items-center justify-between py-4 px-2 rounded-lg">
+             <p class="accordion-title">${this.title}</p>
+            <icon-button 
+              icon="${this.icon}" 
+              toggle-icon="${this.toggleIcon}" 
+              action="accordion"
+            ></icon-button>
         </div>
-        <div id="link-section" class="hidden flex flex-col gap-2 py-2">
-          ${this.content}
+        <div id="link-section">
+          <div id="content-wrapper" class="flex flex-col gap-2">
+            <div class="text-gray-600">
+              ${this.content}
+            </div>
+          </div>
         </div>
     </div>
     `;
