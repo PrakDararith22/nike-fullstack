@@ -1,7 +1,7 @@
 import "@components";
 import { heart, chevron } from "@assets";
 import "./product-detail.css";
-import { StorageList } from "@utility";
+import { StorageList, shuffleObjectValues } from "@utility";
 
 export function productDetail(data, products) {
   const cart = new StorageList("cart");
@@ -163,7 +163,7 @@ export function productDetail(data, products) {
       <div class="py-6">
         <h2 class="font-medium pb-5">You might also like</h2>
         <div class="grid-container overflow-x-auto scrollbar-hidden">
-          ${products
+          ${shuffleObjectValues(products)
             .map(
               item => `
               <a href="/${item.gender}/${item.id}"}">

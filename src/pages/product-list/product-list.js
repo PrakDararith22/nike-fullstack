@@ -1,6 +1,7 @@
 import "@components";
 import "./product-list.css";
 import { sliders, chevron, sort } from "@assets";
+import { shuffleObjectValues } from "@utility";
 
 export function productList(data, category) {
   return /* html */ `
@@ -37,7 +38,7 @@ export function productList(data, category) {
 				<!-- product grid-->
 				<div class="">
 					<div class="product-list-grid flex">
-						${data
+						${shuffleObjectValues(data)
               .map(product => {
                 const price = product.price?.amount
                   ? `${product.price.currency} ${product.price.amount.toFixed(2)}`
