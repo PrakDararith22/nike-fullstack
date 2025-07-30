@@ -119,22 +119,24 @@ export function productDetail(data, products) {
               data-features="${data.features}"
               data-description="${data.description}"
             ></base-button>
-            <base-button 
-              text="Favorite" 
-              size="large"
-              variant="secondary" 
-              icon="${heart}" 
-              data-id="${data.id}"
-              data-name="${data.name}"
-              data-brand="${data.brand}"
-              data-category="${data.category}"
-              data-gender="${data.gender}"
-              data-image="${data.images}"
-              data-currency="${data.price?.currency || ""}"
-              data-amount="${data.price?.amount || 0}"
-              data-features="${data.features}"
-              data-description="${data.description}"
-            ></base-button>
+            <a href="/favorite">
+              <base-button 
+                text="Favorite" 
+                size="large"
+                variant="secondary" 
+                icon="${heart}" 
+                data-id="${data.id}"
+                data-name="${data.name}"
+                data-brand="${data.brand}"
+                data-category="${data.category}"
+                data-gender="${data.gender}"
+                data-image="${data.images}"
+                data-currency="${data.price?.currency || ""}"
+                data-amount="${data.price?.amount || 0}"
+                data-features="${data.features}"
+                data-description="${data.description}"
+              ></base-button>
+            </a>
           </div>
 
           <!-- Description -->
