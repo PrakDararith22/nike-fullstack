@@ -179,4 +179,5 @@ Prettier Configuration
 ESLint Rules
 
 Note: This project uses Vite for development server. Do not manually open index.html in the browser - use npm run dev instead.
-
+database constraint name
+<tablename>_<columnname>_<constrainttype>

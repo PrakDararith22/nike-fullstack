@@ -20,11 +20,11 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["@assets", "./src/assets/assets.js"],
-          ["@components", "./src/components/index.js"],
-          ["@data", "./src/data/data.json"],
-          ["@utility", "./src/utility/utility.js"],
-          ["@pages", "src/pages/pages.js"]
+          ["@assets", "./client/src/assets/assets.js"],
+          ["@components", "./client/src/components/index.js"],
+          ["@data", "./client/src/data/data.json"],
+          ["@utility", "./client/src/utility/utility.js"],
+          ["@pages", "./client/src/pages/pages.js"]
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx", ".svg"]
       }
@@ -63,6 +63,16 @@
       "parserOptions": {
         "ecmaVersion": 2022,
         "sourceType": "module"
+      },
+      "rules": {
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+      }
+    },
+    {
+      "files": ["server/migrations/**/*.js"],
+      "rules": {
+        "camelcase": "off",
+        "id-match": "off"
       }
     }
   ]

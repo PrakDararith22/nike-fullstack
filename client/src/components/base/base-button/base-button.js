@@ -17,7 +17,7 @@ class BaseButton extends BaseComponent {
   connectedCallback() {
     super.connectedCallback();
     this.updateTemplate();
-    this.addEventListener("click", event => {
+    this.addEventListener("click", () => {
       this.emitAction();
       if (this.to) {
         window.location.href = this.to;
