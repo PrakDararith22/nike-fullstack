@@ -4,6 +4,8 @@ import cookieParser from "cookie-parser";
 import morgan from "morgan";
 import userRouter from "./module/auth/route.js";
 import productRouter from "./module/products/router.js";
+import cartRouter from "./module/cart/router.js";
+import wishlistRouter from "./module/wishlist/router.js";
 
 dotenv.config();
 const app = express();
@@ -13,8 +15,10 @@ app.use(cookieParser());
 app.use(express.json());
 app.set("query parser", "extended");
 app.use(morgan("dev"));
-app.use(userRouter);
-app.use(productRouter);
+app.use("/api", userRouter);
+app.use("/api", productRouter);
+app.use("/api", cartRouter);
+app.use("/api", wishlistRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Route not found" });
