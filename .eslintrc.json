@@ -69,7 +69,7 @@
       }
     },
     {
-      "files": ["server/migrations/**/*.js"],
+      "files": ["server/**/*.js"],
       "rules": {
         "camelcase": "off",
         "id-match": "off"
