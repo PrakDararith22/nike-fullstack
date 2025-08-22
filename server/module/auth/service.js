@@ -26,9 +26,9 @@ export async function registerUserService({ username, email, password }) {
 }
 
 export async function verifyOptService(email, opt) {
+  if (!email) throw new Error("Password Required");
+  if (!opt) throw new Error("OPT Required");
   const storedOpt = await getOtp(email);
-  console.log("stored opt", storedOpt);
-  console.log("opt", opt);
 
   if (!storedOpt) throw new Error("OTP expired or not found");
   if (opt !== storedOpt) throw new Error("invalid OPT");
@@ -49,9 +49,12 @@ export async function verifyOptService(email, opt) {
 }
 
 export async function deleteUserService(id, password) {
+  if (!id) throw new Error("ID Required");
+  if (!password) throw new Error("Password Required");
+
+  // consider let db handle or what
   const user = await getUserModel(id);
   if (!user) throw new Error("User Not Found");
-
   const match = await bcrypt.compare(password, user.password);
   if (!match) throw new Error("Incorrect Password");
 
@@ -61,6 +64,9 @@ export async function deleteUserService(id, password) {
 }
 
 export async function verifyUserService({ username, password }) {
+  if (!username) throw new Error("Username Required");
+  if (!password) throw new Error("Password Required");
+
   const result = await getUserByNameModel(username);
   if (!result) throw new Error("User Not Found");
   const match = await bcrypt.compare(password, result.password);

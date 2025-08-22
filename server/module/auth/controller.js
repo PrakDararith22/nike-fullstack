@@ -40,7 +40,7 @@ export async function deleteUserController(req, res) {
     res.status(400).json({ error: error.message });
   }
 }
-
+// considering about token epxire time and cookie eexpire time
 export async function loginController(req, res) {
   try {
     const { username, password } = req.body;
